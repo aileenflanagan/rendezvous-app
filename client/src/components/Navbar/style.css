@@ -1,0 +1,11 @@
+#navbar-div{
+	display: inline;
+}
+
+#logo-div{
+	background-color: rgb(155, 103, 204);
+}
+
+button{
+	margin-left: 1rem;
+}
