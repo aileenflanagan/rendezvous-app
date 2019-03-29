@@ -1,0 +1,10 @@
+#title-div{
+	background-color: rgb(87, 207, 197);
+	text-align: center;
+	margin-top: 5rem;
+}
+
+/* this will affect all rows */
+.row{
+	width: 100%;
+}
