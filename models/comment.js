@@ -6,7 +6,7 @@ const commentSchema = new Schema({
     description: { type: String, required: true},
     date: { type: Date, default: Date.now },
     like: { type: String },
-    dislike: { type: String }
+    // dislike: { type: String }
 });
 
 const Comment = mongoose.model("Comment", commentSchema);
