@@ -3,20 +3,14 @@ var Schema = mongoose.Schema;
 
 var groupSchema = new Schema({
   
-  groupName: { 
-    type: String, 
-    required: true 
-    },
+  groupName: {type: String, required: true},
 
-  adminID: { 
-    type: String, 
-    required: true 
-    },
+  adminID: {type: String, required: true},
   
   meeting: {
-        name: String, 
-        Time: {    
-            type: Date},
+        name: {type: String, 
+               required: true},
+        Time: {type: Date},
         address: {
               state: String, 
               city: String,
@@ -24,15 +18,10 @@ var groupSchema = new Schema({
               housenumber: String},                
      },   
  
-  private: {
-    type: Boolean 
-    },
+  private: {type: Boolean, required: true},
   
-  userCreated: {
-    type: Date,
-    default: Date.now
-  },
-
+  userCreated: {type: Date, default: Date.now}
+  
 });
 
 // Create the model from above schema

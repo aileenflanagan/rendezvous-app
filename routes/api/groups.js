@@ -1,20 +1,16 @@
 const router = require("express").Router();
-var express = express.Router()
-var groups = require('../models/groups')
-//controller for 
+const groupsController = require("../controllers/groupsController");
 
-// this is the get all /api/groups route
-router.get('/', function(req, res){
-    groups.find()
-})
-    .get()
-    .post()
+// Matches with "/api/groups"
+router.route("/")
+  .get(groupsController.findAll)
+  .post(groupsController.create);
 
-// this is the /api/groups/:id route
-router.route('/:id')
-    .get()
-    .post()    
+// Matches with "/api/groups/:id"
+router
+  .route("/:id")
+  .get(groupsController.findById)
+  .put(groupsController.update)
+  .delete(groupsController.remove);
 
-
-
-module.exports = router
+module.exports = router;
