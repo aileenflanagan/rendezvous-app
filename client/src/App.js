@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import './App.css';
-import Navbar from "./components/Navbar";
-import Title from "./components/Title";
-import Carousel from "./components/Carousel";
+import Home from "./pages/Home/index";
+import Group from "./pages/Group/index";
 
 class App extends Component {
+  state = {
+    // get info from database and set state
+  }
+
   render() {
     return (<>
-      <Navbar />
-      <Title />
-      <Carousel />
+      {/* TODO: create routes for each page */}
+      {/* <Home /> */}
+      <Group />
     </>
     );
   }
