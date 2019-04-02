@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Home from "./pages/Home/index";
 import Group from "./pages/Group/index";
+import Signup from "./pages/Signup/index";
 
 class App extends Component {
   state = {
@@ -12,7 +13,8 @@ class App extends Component {
     return (<>
       {/* TODO: create routes for each page */}
       {/* <Home /> */}
-      <Group />
+      {/* <Group /> */}
+      <Signup />
     </>
     );
   }
