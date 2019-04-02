@@ -53,6 +53,17 @@ function Group() {
 
 
 
+		<div className="row">
+			<div className="col-md-1"></div>
+			<div className="col-md-4 info-div">
+				{/* <Members /> */}[Group Members go here]
+			</div>
+			<div className="col-md-2"></div>
+			<div className="col-md-4 info-div">
+				{/* <Goals /> */}[Goals go here]
+			</div>
+		</div>
+
 
 
 
