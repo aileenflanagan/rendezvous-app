@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 import GroupInfo from "../GroupInfo/index";
-import NavbarBasic from "../NavbarBasic/index";
+import NavbarBasic from "../NavbarBasic";
 import AccountInfo from "../AccountInfo";
 import GroupCard from "../GroupCard";
 
@@ -48,9 +48,10 @@ function ManageGroups(props) {
 			<div className="col-md-1"></div>
 			<div className="col-md-10" id="joined-groups-div">
 
+				<div>[group card component goes here: group image, group name]</div>	{/* temporary */}
 
-					<GroupCard />
-					{/* <GroupCard />
+				<GroupCard />
+				{/* <GroupCard />
 					<GroupCard />
 					<GroupCard />
 					<GroupCard />
@@ -61,8 +62,8 @@ function ManageGroups(props) {
 					<GroupCard /> */}
 
 
-					{/* below assumes a state with a `group: group` has been made. it might not be the right thing to do. */}
-					{/* {this.state.group.map(
+				{/* below assumes a state with a `group: group` has been made. it might not be the right thing to do. */}
+				{/* {this.state.group.map(
 						group => <GroupCard
 							// this is where the group's image appears
 							groupName={group.groupName}
@@ -78,13 +79,10 @@ function ManageGroups(props) {
 		<div className="row">
 			<div className="col-md-1"></div>
 			<div className="col-md-10" id="created-groups-div">
-				[group card component goes here: group image, group name, reassign btn, delete btn]
-
-
-
-			<GroupCard
-				groupName={props.groupName}
-			/>
+				<div>[group card component goes here: group image, group name, reassign btn, delete btn]</div>	{/* temporary */}
+				<GroupCard
+					groupName={props.groupName}
+				/>
 
 
 			</div>

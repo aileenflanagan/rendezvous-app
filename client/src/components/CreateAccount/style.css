@@ -1,8 +1,19 @@
+#input-row{
+	background: url("../../images/pencil.jpg");
+}
+
 h2{
 	margin-top: 1rem;
+	background-color: rgba(121, 112, 112, 0.5);
 }
 
 input{
 	border: 3px solid black;
 	padding: 2px;
+}
+
+#signup-btn{
+	margin: auto;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
