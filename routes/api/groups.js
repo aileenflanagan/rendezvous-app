@@ -7,10 +7,10 @@ router.route("/")
   .post(groupController.create);
 
 // Matches with "/api/groups/:id"
-// router
-//   .route("/:id")
-//   .get(groupController.findById)
-//   .put(groupController.update)
-//   .delete(groupController.remove);
+router
+  .route("/:id")
+  // .get(groupController.findById)
+  .put(groupController.update)
+  .delete(groupController.remove);
 
 module.exports = router;

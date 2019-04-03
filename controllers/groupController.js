@@ -7,12 +7,12 @@ module.exports = {
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
-    findByZip: function(req, res){
-        db.Groups
-            .find()
-            .then()
-            .catch(err => res.status(422).json(err));
-    },
+    // findByZip: function(req, res){
+    //     db.Groups
+    //         .find()
+    //         .then()
+    //         .catch(err => res.status(422).json(err));
+    // },
     create: function(req, res){
         db.Groups
             .create(req.body)
