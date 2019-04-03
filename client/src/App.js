@@ -6,12 +6,11 @@ import Group from "./pages/Group/index";
 import Signup from "./pages/Signup/index";
 import CreateGroup from "./pages/CreateGroup/index";
 import Search from "./pages/Search/index";
-import Manage from "./pages/ManageGroups/index"
+import Manage from "./pages/ManageGroups/index";
 
 const App = () => (
   <Router>
     <div>
-      <NavBar/>
       <Route exact path ="/" component= {Home}/>
       <Route exact path="/group" component={Group} />
       <Route exact path="/signup" component={Signup} />
@@ -21,23 +20,5 @@ const App = () => (
     </div>
   </Router>
 );
-
-
-
-// class App extends Component {
-//   state = {
-//     // get info from database and set state
-//   }
-
-//   render() {
-//     return (<>
-//       {/* TODO: create routes for each page */}
-//       {/* <Home /> */}
-//       {/* <Group /> */}
-//       <Signup />
-//     </>
-//     );
-//   }
-// }
 
 export default App;
