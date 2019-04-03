@@ -9,7 +9,7 @@ router.route("/")
 // Matches with "/api/groups/:id"
 router
   .route("/:id")
-  .get(groupController.findById)
+  // .get(groupController.findById)
   .put(groupController.update)
   .delete(groupController.remove);
 
