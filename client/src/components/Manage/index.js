@@ -26,7 +26,7 @@ function ManageGroups(props) {
 			<div className="col-md-1"></div>
 
 			{/* User Info */}
-			<div className="col-md-6">
+			<div className="col-md-6" id="user-info-div">
 				<div className="row" id="edit-row">
 					<div className="col-md-10" id="settings-div">
 						<AccountInfo
@@ -37,7 +37,7 @@ function ManageGroups(props) {
 						/>
 					</div>
 					<div className="col-md-2" id="edit-btn-div">
-						<button onClick={clickHandler} id="edit-btn">Edit</button>
+						<button onClick={clickHandler} className="btn btn-primary" id="edit-btn">Edit</button>
 					</div>
 				</div>
 			</div>
@@ -60,15 +60,6 @@ function ManageGroups(props) {
 					<GroupCard />
 					<GroupCard />
 					<GroupCard /> */}
-
-
-				{/* below assumes a state with a `group: group` has been made. it might not be the right thing to do. */}
-				{/* {this.state.group.map(
-						group => <GroupCard
-							// this is where the group's image appears
-							groupName={group.groupName}
-						/>
-					)} */}
 
 
 			</div>
