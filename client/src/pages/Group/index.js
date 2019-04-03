@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import "./style.css";
 import NavbarGroup from "../../components/NavbarGroup";
 
@@ -18,52 +18,56 @@ console.log(props.groceries.map(
   ),
 */
 
-function Group() {
-	return (<>
-		<NavbarGroup
-			name={"[get name from db]"}
-		/>
+class Group extends Component {
+	state = {
+		
+	}
+	render() {
+		return (<>
+			<NavbarGroup
+				name={"[get name from db]"}
+			/>
 
 
-		<div className="row">
-			<div className="col-md-1"></div>
-			<div className="col-md-4 info-div">
-				groupName
+			<div className="row">
+				<div className="col-md-1"></div>
+				<div className="col-md-4 info-div">
+					groupName
 				{/* name={"[get name from db]"} */}
-				<GroupInfo />
+					<GroupInfo />
+				</div>
+				<div className="col-md-2"></div>
+				<div className="col-md-4 info-div">
+					{/* <GroupPic /> */}[Group Picture goes here]
 			</div>
-			<div className="col-md-2"></div>
-			<div className="col-md-4 info-div">
-				{/* <GroupPic /> */}[Group Picture goes here]
 			</div>
-		</div>
 
 
-		<div className="row">
-			<div className="col-md-1"></div>
-			<div className="col-md-4 info-div">
-				<Meetings />
+			<div className="row">
+				<div className="col-md-1"></div>
+				<div className="col-md-4 info-div">
+					<Meetings />
+				</div>
+				<div className="col-md-2"></div>
+				<div className="col-md-4 info-div">
+					{/* <Discussions /> */}[Discussion Board go here]
 			</div>
-			<div className="col-md-2"></div>
-			<div className="col-md-4 info-div">
-				{/* <Discussions /> */}[Discussion Board go here]
 			</div>
-		</div>
 
 
-		<div className="row">
-			<div className="col-md-1"></div>
-			<div className="col-md-4 info-div">
-				{/* <Members /> */}[Group Members go here]
+			<div className="row">
+				<div className="col-md-1"></div>
+				<div className="col-md-4 info-div">
+					{/* <Members /> */}[Group Members go here]
 			</div>
-			<div className="col-md-2"></div>
-			<div className="col-md-4 info-div">
-				{/* <Goals /> */}[Goals go here]
+				<div className="col-md-2"></div>
+				<div className="col-md-4 info-div">
+					{/* <Goals /> */}[Goals go here]
 			</div>
-		</div>
+			</div>
 
-
-	</>);
+		</>);
+	}
 }
 
 export default Group;

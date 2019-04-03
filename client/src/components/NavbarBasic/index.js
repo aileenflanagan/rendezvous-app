@@ -14,8 +14,7 @@ function NavbarBasic() {
 
 				</ul>
 				<div id="button-div">
-					<button className="btn btn-primary" id="login-btn">Login</button>
-					<button className="btn btn-primary" id="create-acct-btn">Create account</button>
+					<button className="btn btn-primary" id="signout-btn">Sign Out</button>
 				</div>
 			</div>
 		</nav>
