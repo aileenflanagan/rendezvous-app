@@ -1,17 +1,19 @@
 import React from "react";
 
 function GroupInfo(props) {
-	return (
+	return (<>
 		<div id="info-div">
-			<div>{props.name}
+			<div>
 				<ul>
-					<li>Location</li>
-					<li>Scheduled Meetup Time</li>
-					<li>Description</li>
+					{/* <li>Location: {props.meeting.address}</li> */}
+					{/* <li>Meetup time: {props.meeting.Time}</li> */}
+					<li>Location: {props.meeting}</li>
+					<li>Meetup time: {props.meeting}</li>
+					<li>Description: {props.groupName}</li>
 				</ul>
 			</div>
 		</div>
-	);
+	</>);
 }
 
 export default GroupInfo;

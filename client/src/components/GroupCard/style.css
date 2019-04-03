@@ -1,0 +1,6 @@
+#group-card{
+	width: 200px;
+	display: inline-flex;
+	margin: 0.8rem;
+	background-color: lightblue;
+}

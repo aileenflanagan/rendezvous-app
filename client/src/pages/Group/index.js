@@ -28,16 +28,15 @@ function Group() {
 		<div className="row">
 			<div className="col-md-1"></div>
 			<div className="col-md-4 info-div">
-				<GroupInfo
-					name={"[get name from db]"}
-				/>
+				groupName
+				{/* name={"[get name from db]"} */}
+				<GroupInfo />
 			</div>
 			<div className="col-md-2"></div>
 			<div className="col-md-4 info-div">
 				{/* <GroupPic /> */}[Group Picture goes here]
 			</div>
 		</div>
-
 
 
 		<div className="row">
@@ -52,7 +51,6 @@ function Group() {
 		</div>
 
 
-
 		<div className="row">
 			<div className="col-md-1"></div>
 			<div className="col-md-4 info-div">
@@ -63,11 +61,6 @@ function Group() {
 				{/* <Goals /> */}[Goals go here]
 			</div>
 		</div>
-
-
-
-
-
 
 
 	</>);
