@@ -2,6 +2,11 @@
   "dependencies": {
     "express": "^4.16.4",
     "mongo": "^0.1.0",
-    "mongoose": "^5.4.20"
+    "mongoose": "^5.4.20",
+    "react-router-dom": "^5.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   }
 }

@@ -6,7 +6,7 @@ import Group from "./pages/Group/index";
 import Signup from "./pages/Signup/index";
 import CreateGroup from "./pages/CreateGroup/index";
 import Search from "./pages/Search/index";
-import Manage from "./pages/ManageGroups/index";
+// import Manage from "./pages/ManageGroups/index"
 
 const App = () => (
   <Router>
@@ -16,7 +16,7 @@ const App = () => (
       <Route exact path="/signup" component={Signup} />
       <Route exact path="/createGroup" component={CreateGroup}/>
       <Route exact path="/search" component={Search}/>
-      <Route exact path="/manage" component={Manage}/>
+      {/* <Route exact path="/manage" component={Manage}/> */}
     </div>
   </Router>
 );
