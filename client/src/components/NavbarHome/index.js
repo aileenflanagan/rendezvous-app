@@ -27,8 +27,8 @@ function NavbarHome() {
 
 				</ul>
 				<div id="button-div">
-					<button className="btn btn-primary" id="login-btn">Login</button>
-					<button className="btn btn-primary" id="create-acct-btn">Create account</button>
+					<button className="btn btn-primary home-buttons" id="login-btn">Login</button>
+					<button className="btn btn-primary home-buttons" id="create-acct-btn">Create account</button>
 				</div>
 			</div>
 		</nav>
