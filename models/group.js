@@ -1,7 +1,7 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
-var groupSchema = new Schema({
+var groupsSchema = new Schema({
   
   groupName: {type: String, required: true},
 
@@ -25,7 +25,7 @@ var groupSchema = new Schema({
 });
 
 // Create the model from above schema
-var group = mongoose.model("group", groupSchema);
+var Groups = mongoose.model("groups", groupsSchema);
 
 // Export
-module.exports = group;
+module.exports = Groups;

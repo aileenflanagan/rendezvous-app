@@ -1,0 +1,33 @@
+
+use rendezvousdb
+
+db.user.find().pretty()
+
+
+db.user.insertOne({
+		"userName": "jdoe", 
+		"email": "jdoe@email.com",
+		"password": "password1",
+		"location": "MN", 
+		"groupId": "001",
+		"admin": "Yes"})
+                
+use rendezvousdb              
+db.groups.insertOne({
+		"groupName":"Group Doe",   
+		"adminId": "jdoe",                              
+		"private": "true",
+                "meeting": {"name": "Test Meeting Name",
+                            "Time": "04:20 PM",
+                            "address": {"state": "MN", 
+                                        "city": "Minneapolis", 
+                                        "address": "99 Address1"},
+                              },
+			})
+
+db.comment.insertOne({
+                "userId": " ", 
+                "description": " ", 
+                "date": "",
+                "like": " " })
+                

@@ -21,22 +21,4 @@ const App = () => (
   </Router>
 );
 
-
-
-// class App extends Component {
-//   state = {
-//     // get info from database and set state
-//   }
-
-//   render() {
-//     return (<>
-//       {/* TODO: create routes for each page */}
-//       {/* <Home /> */}
-//       {/* <Group /> */}
-//       <Signup />
-//     </>
-//     );
-//   }
-// }
-
 export default App;

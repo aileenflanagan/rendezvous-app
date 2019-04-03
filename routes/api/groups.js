@@ -1,16 +1,16 @@
 const router = require("express").Router();
-const groupsController = require("../controllers/groupsController");
+const groupController = require("../../controllers/groupController");
 
 // Matches with "/api/groups"
 router.route("/")
-  .get(groupsController.findAll)
-  .post(groupsController.create);
+  .get(groupController.findAll)
+  .post(groupController.create);
 
 // Matches with "/api/groups/:id"
 router
   .route("/:id")
-  .get(groupsController.findById)
-  .put(groupsController.update)
-  .delete(groupsController.remove);
+  // .get(groupController.findById)
+  .put(groupController.update)
+  .delete(groupController.remove);
 
 module.exports = router;
