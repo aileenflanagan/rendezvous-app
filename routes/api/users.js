@@ -31,24 +31,25 @@ router
     // req.checkBody('password', "Password Required").notEmpty();
     // //password-2?
     // req.checkBody('location', "Location Required").notEmpty();
-    var newUser = {
-      username: username,
+
+    var newUser = new User({
+      userName: username,
       email: email,
       password: password,
       location: location          
-    }
+    })   
 
     var errors = false;
 
     if(errors){
       console.log("Register error")
-    }else{
-      
-      console.log("userrrr",newUser);
-      // User.createUser(newUser, function(err, user){
-      //   if(err) throw err;
-      //   console.log(user);
-      // })
+    }else{          
+      res.json(newUser);
+      User.createUser(newUser, function(err, user){
+        if(err) throw err;
+        console.log("user", user);
+        userController.create(user)
+      })
     }
     
   });
