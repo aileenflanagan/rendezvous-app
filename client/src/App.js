@@ -10,8 +10,7 @@ import Manage from "./pages/ManageGroups/index"
 
 const App = () => (
   <Router>
-    <div>
-      <NavBar/>
+    <div>      
       <Route exact path ="/" component= {Home}/>
       <Route exact path="/group" component={Group} />
       <Route exact path="/signup" component={Signup} />
