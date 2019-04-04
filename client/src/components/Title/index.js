@@ -7,8 +7,8 @@ function Title() {
 			<div className="col-md-2"></div>
 			<div className="col-md-8" id="title-div">Rendezvous
 				<div id="description-div">
-					<p>Hello we are Rendezvous (pronounced ren-dez-voiz)
-						Thank you for being here I hope you like it grade 5 stars please
+					<p>Hello! We are Rendezvous (pronounced ren-dez-voiz)! We get you out your door and into the world of what you love!
+						
 					</p>
 				</div>
 			</div>

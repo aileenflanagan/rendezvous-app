@@ -3,6 +3,15 @@ import "./style.css";
 
 function CreateAccount() {
 	return (<div id="container">
+<div id="color2" className="row">
+			<div className="col-md-2"></div>
+			<div className="col-md-8" id="title-div">Your Journey Starts</div>
+				<div id="description-div">
+					<p>Are you ready to change your life? Sign up and start doing the things you love!
+					</p>
+				</div>
+			
+		</div>
 
 		<div className="row" id="input-row">
 			<div className="col-md-5"></div>
