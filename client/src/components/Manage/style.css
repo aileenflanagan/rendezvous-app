@@ -1,0 +1,16 @@
+#profile-pic-div, #settings-div, #joined-groups-div, #created-groups-div, #edit-btn-div, #user-info-div{
+	background-color: rgb(132, 201, 201);
+}
+
+#personal-info-tag{
+	margin: 1rem;
+}
+
+#edit-btn{
+	float: right;
+	margin: 0.5rem;
+}
+
+#edit-row{
+	margin-top: 0;
+}

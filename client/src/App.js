@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Home from "./pages/Home/index";
-import Group from "./pages/Group/index";
-import Signup from "./pages/Signup/index";
-import CreateGroup from "./pages/CreateGroup/index";
-import Search from "./pages/Search/index";
-import Manage from "./pages/ManageGroups/index"
+import Home from "./pages/Home";
+import Group from "./pages/Group";
+import Signup from "./pages/Signup";
+import CreateGroup from "./pages/CreateGroup";
+import Search from "./pages/Search";
+import Manage from "./pages/ManageGroups";
 
 const App = () => (
   <Router>
+<<<<<<< HEAD
     <div>      
+=======
+    <div>
+>>>>>>> 174a177f06467e620990d12ce0ce1553dc7501fd
       <Route exact path ="/" component= {Home}/>
       <Route exact path="/group" component={Group} />
       <Route exact path="/signup" component={Signup} />
@@ -20,23 +24,5 @@ const App = () => (
     </div>
   </Router>
 );
-
-
-
-// class App extends Component {
-//   state = {
-//     // get info from database and set state
-//   }
-
-//   render() {
-//     return (<>
-//       {/* TODO: create routes for each page */}
-//       {/* <Home /> */}
-//       {/* <Group /> */}
-//       <Signup />
-//     </>
-//     );
-//   }
-// }
 
 export default App;
