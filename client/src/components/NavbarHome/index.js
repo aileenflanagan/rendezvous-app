@@ -9,7 +9,7 @@ function NavbarHome() {
 			<div className="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul className="navbar-nav mr-auto">
 					<li className="nav-item active">
-						<a className="nav-link">Rendezvous <span className="sr-only">(current)</span></a>
+						<a className="nav-link" href="/">Rendezvous <span className="sr-only">(current)</span></a>
 					</li>
 					
 					<li className="nav-item dropdown">
@@ -28,7 +28,7 @@ function NavbarHome() {
 				</ul>
 				<div id="button-div">
 					<button className="btn btn-primary" id="login-btn">Login</button>
-					<button className="btn btn-primary" id="create-acct-btn">Create account</button>
+					<a className="btn btn-primary" id="create-acct-btn" href="/signup">Create account</a>
 				</div>
 			</div>
 		</nav>
