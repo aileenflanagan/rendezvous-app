@@ -14,7 +14,19 @@
 	margin-bottom: 1rem;
 }
 
+#color2 {
+	background: rgb(226, 225, 225)
+}
 
+#description-div {
+	font-size: 1em;
+	font-family: 'Times New Roman', Times, serif
+}
+
+#title-div {
+	font-size: 2em;
+	font-family: cursive
+}
 /* Rainbow is pretty, but this should be changed to better suit some theme */
 /* html, #root{
 	background: linear-gradient(
