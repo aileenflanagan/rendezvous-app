@@ -6,22 +6,22 @@ import GroupCard from "../GroupCard";
 function Search() {
 	return (<>
 
-		<div className="row">
+		<div className="row group-search-rows">
 			<div className="col-md-1"></div>
 			<div className="col-md-6">
 				<h1>Search Groups</h1>
 
-				<p>Search by Keyword</p>
+				<p className="pea-tags">Search by Keyword</p>
 				<input type="text"></input>
 				<button>Search</button>
 
-				<p>Search by Location</p>
+				<p className="pea-tags">Search by Location</p>
 				<input type="text"></input>
 				<button>Search</button>
 			</div>
 		</div>
 
-		<div className="row">
+		<div className="row group-search-rows">
 			<div className="col-md-1"></div>
 			<div className="col-md-8">
 

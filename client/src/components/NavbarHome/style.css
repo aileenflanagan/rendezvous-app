@@ -2,11 +2,7 @@
 	display: inline;
 }
 
-#logo-div{
-	background-color: rgb(155, 103, 204);
-}
-
-button{
+.home-buttons{
 	margin-left: 1rem;
 }
 #create-acct-btn{

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Home from "./pages/Home/index";
-import Group from "./pages/Group/index";
-import Signup from "./pages/Signup/index";
-import CreateGroup from "./pages/CreateGroup/index";
-import Search from "./pages/Search/index";
-// import Manage from "./pages/ManageGroups/index"
+import Home from "./pages/Home";
+import Group from "./pages/Group";
+import Signup from "./pages/Signup";
+import CreateGroup from "./pages/CreateGroup";
+import Search from "./pages/Search";
+import Manage from "./pages/ManageGroups";
 
 const App = () => (
   <Router>
@@ -16,7 +16,7 @@ const App = () => (
       <Route exact path="/signup" component={Signup} />
       <Route exact path="/createGroup" component={CreateGroup}/>
       <Route exact path="/search" component={Search}/>
-      {/* <Route exact path="/manage" component={Manage}/> */}
+      <Route exact path="/manage" component={Manage}/>
     </div>
   </Router>
 );

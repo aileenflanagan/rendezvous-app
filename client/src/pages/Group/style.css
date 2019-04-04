@@ -1,11 +1,8 @@
-.row{
-	margin: 0;
-	margin-top: 5rem;
-	/* border: 2px solid brown; */
-	/* background-color: rgb(138, 138, 138); */
-}
-
 .info-div{
 	/* background-color: cornflowerblue; */
 	background-color: rgb(138, 138, 138);
+}
+
+#main-row{
+	/* margin-top: 0; */
 }

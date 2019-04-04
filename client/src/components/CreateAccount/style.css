@@ -1,15 +1,11 @@
 #input-row{
+	margin-top: 5rem;
 	background: url("../../images/pencil.jpg");
 }
 
-h2{
+.headers{
 	margin-top: 1rem;
-	background-color: rgba(121, 112, 112, 0.5);
-}
-
-input{
-	border: 3px solid black;
-	padding: 2px;
+	background-color: rgba(121, 112, 112, 0.5	);
 }
 
 #signup-btn{
@@ -17,3 +13,16 @@ input{
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 }
+
+/* Rainbow is pretty, but this should be changed to better suit some theme */
+/* html, #root{
+	background: linear-gradient(
+		to right,
+		rgba(255, 0, 0, 0.8),
+		rgba(255, 166, 0, 0.8),
+		rgba(255, 255, 0, 0.8),
+		rgba(0, 128, 0, 0.8),
+		rgba(0, 0, 255, 0.8),
+		rgba(76, 0, 130, 0.8),
+		rgba(238, 130, 238, 0.8));
+} */
