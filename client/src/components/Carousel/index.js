@@ -3,7 +3,7 @@ import "./style.css";
 
 function Carousel() {
 	return (
-		<div className="row">
+		<div id="color" className="row">
 			<div className="col-md-3"></div>
 			<div className="col-md-6" id="carousel-div">
 				<div className="bd-example">
