@@ -7,6 +7,18 @@ module.exports = {
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
+
+    findByKeywords: function(req, res){
+        db.Groups
+            .find({groupName: { $regex: `${req.params.searchTerm}`, $options: "i" }})
+    },
+
+
+
+
+
+
+
     // findByZip: function(req, res){
     //     db.Groups
     //         .find()
