@@ -10,7 +10,7 @@ How do you get started?
   * Click on the create account button in the upper right-hand corner. 
   * This will take you to the sign up page! Fill in your information. Your zipcode will determine which groups you are able to see based on your current location!
 <br/>
-  <img width="1301" alt="signup" src="https://user-images.githubusercontent.com/46298501/55500971-177bd380-560f-11e9-893d-700c572f2d08.png">
+  <img width="1302" alt="signup" src="https://user-images.githubusercontent.com/46298501/55574444-08118e80-56d2-11e9-8a18-88204913444c.png">
   
   <br/>
   
