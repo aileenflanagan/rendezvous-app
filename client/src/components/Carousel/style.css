@@ -6,3 +6,19 @@
 .carousel-item{
 	height: 500px;
 }
+
+#color {
+	background: #DEF2F1;
+}
+
+.darker {
+	background: gray;
+	color: white;
+	
+}
+
+.darker2 {
+	background:red;
+	color: white;
+	margin: auto;
+}

@@ -4,13 +4,13 @@ If you would like to download this repo, please clone it to a folder and then in
 
 This website is to get you out your door and start doing the things you love with others who feel the same! Rendezvous allows you to join groups based on activities such as painting, writing, working out, video games, etc. and/or create your own group(s)! <br/>
 
-<img width="1301" alt="profile" src="https://user-images.githubusercontent.com/46298501/55500328-b9022580-560d-11e9-99cf-1e369c3ec787.png">
+<img width="1304" alt="profile" src="https://user-images.githubusercontent.com/46298501/55574257-989b9f00-56d1-11e9-8a7b-28327b527f36.png">
 <br/>
 How do you get started? 
   * Click on the create account button in the upper right-hand corner. 
   * This will take you to the sign up page! Fill in your information. Your zipcode will determine which groups you are able to see based on your current location!
 <br/>
-  <img width="1301" alt="signup" src="https://user-images.githubusercontent.com/46298501/55500971-177bd380-560f-11e9-893d-700c572f2d08.png">
+  <img width="1302" alt="signup" src="https://user-images.githubusercontent.com/46298501/55574444-08118e80-56d2-11e9-8a18-88204913444c.png">
   
   <br/>
   

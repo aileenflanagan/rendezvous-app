@@ -19,8 +19,13 @@ module.exports = {
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
+<<<<<<< HEAD
     findAll: function(req, res){
         db.Users
+=======
+    find: function(req, res){
+        db.User
+>>>>>>> 9bf3d7cb75f21d7fd4e32bcbe62367cddc366dce
             .find(req.query)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
