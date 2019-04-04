@@ -2,10 +2,9 @@
 	display: inline;
 }
 
-#logo-div{
-	background-color: rgb(155, 103, 204);
+.home-buttons{
+	margin-left: 1rem;
 }
-
-button{
+#create-acct-btn{
 	margin-left: 1rem;
 }

@@ -8,15 +8,6 @@ import GroupInfo from "../../components/GroupInfo";
 import Meetings from "../../components/Meetings";
 // import Discussions from "../../components/Discussions";
 
-/* get group info from database and put into state:
-groupName
-groupImage
-
-below may be helpful
-console.log(props.groceries.map(
-    item => <li>{item.name}</li>
-  ),
-*/
 
 class Group extends Component {
 	state = {
@@ -29,7 +20,7 @@ class Group extends Component {
 			/>
 
 
-			<div className="row">
+			<div className="row" id="main-row">
 				<div className="col-md-1"></div>
 				<div className="col-md-4 info-div">
 					groupName
