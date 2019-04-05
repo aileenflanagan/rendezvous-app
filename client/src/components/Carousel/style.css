@@ -12,13 +12,14 @@
 }
 
 .darker {
-	background: gray;
+	background: rgb(80, 78, 78);
 	color: white;
 	
 }
 
 .darker2 {
-	background:red;
+	background:rgb(2, 2, 2);
 	color: white;
 	margin: auto;
 }
+
