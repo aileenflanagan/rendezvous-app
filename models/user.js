@@ -13,9 +13,6 @@ const usersSchema = new Schema({
 
 const Users = mongoose.model("Users ", usersSchema);
 
-<<<<<<< HEAD
-module.exports = Users;
-=======
 User.createUser = function(newUser, callback){
     bcrypt.genSalt(10, function(err, salt) {
         bcrypt.hash(newUser.password, salt, function(err, hash) {
@@ -36,4 +33,3 @@ User.comparePassword = function(passwordTry, hash, callback){
 
 
 module.exports = User;
->>>>>>> 9bf3d7cb75f21d7fd4e32bcbe62367cddc366dce
