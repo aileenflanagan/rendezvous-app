@@ -9,15 +9,12 @@ module.exports = {
     },
 
     findByKeywords: function(req, res){
+        console.log("findbykeywords, groupcontroller");
         db.Groups
-            .find({groupName: { $regex: `${req.params.searchTerm}`, $options: "i" }})
+            .find({groupName: { $regex: `${req.params.keyword}`, $options: "i" }})
+            .then(dbModel => res.json(dbModel), console.log("On: groupController.js"))
+            .catch(err => res.status(422).json(err));
     },
-
-
-
-
-
-
 
     // findByZip: function(req, res){
     //     db.Groups
