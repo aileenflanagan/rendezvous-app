@@ -2,12 +2,14 @@
 	background-color: rgb(87, 207, 197);
 	text-align: center;
 	margin-top: 2rem;
+	margin-bottom: 2rem;
+	
 }
 
 /* this will affect all rows */
-.row{
+/* .row{
 	width: 100%;
-}
+} */
 
 #color {
 	background: #DEF2F1;

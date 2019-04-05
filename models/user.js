@@ -33,8 +33,4 @@ User.comparePassword = function(passwordTry, hash, callback){
 
 
 
-<<<<<<< HEAD
 module.exports = User;
-=======
-module.exports = User;
->>>>>>> 866a2b7cfec3dd38941e4271da2f1f65340ffe52
