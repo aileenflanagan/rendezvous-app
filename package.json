@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "cloudinary": "^1.14.0",
     "express": "^4.16.4",
+    "express-form-data": "^2.0.8",
     "mongo": "^0.1.0",
     "mongoose": "^5.4.20",
     "react-router-dom": "^5.0.0"
