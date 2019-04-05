@@ -1,11 +1,17 @@
 import React from "react";
 import "./style.css";
 
-function GroupCard(props){
-	return(
+function GroupCard(props) {
+	console.log("props:", props);
+	return (
 		<div id="group-card">
-			<div id="img-container"></div>
-			<div>Group name: {props.groupName}</div>
+			{props.groups.map(group => (
+				<div key={group._id}>
+					<div id="img-container">img</div>
+					<div>Group name: {group.groupName}</div>
+				</div>
+			))}
+
 		</div>
 	);
 }

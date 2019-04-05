@@ -14,14 +14,14 @@ class Search extends Component {
 		this.setState({ search: event.target.value })
 	}
 
-
 	searchGroupsKeyword = () => {
-
+		console.log("keyword:",this.state.search);
 		API.findByKeywords(this.state.search)
 			.then(response => {
 				this.setState({ groups: response.data })
 				console.log("response.data: ", response.data)
 			})
+			.catch( (err) => { console.log(".catch error:", err)})
 	}
 
 	render() {
@@ -33,7 +33,7 @@ class Search extends Component {
 					<h1>Search Groups</h1>
 
 					<p className="pea-tags">Search by Keyword</p>
-					<input type="text"></input>
+					<input type="text" onChange={this.handleInputChange}></input>
 					<button onClick={this.searchGroupsKeyword}>Search</button>
 
 					<p className="pea-tags">Search by Location</p>
@@ -48,12 +48,9 @@ class Search extends Component {
 
 					{/* TODO: dynamically add the groups that a user
 					is part of and make new GroupCards for each one */}
-					{this.state.groups.map(group => (
 						<GroupCard
-							key={group._id}
-							name={group.groupName}
+							groups={this.state.groups}
 						/>
-					))}
 
 
 					{/* <GroupCard />
