@@ -13,6 +13,16 @@ class Group extends Component {
 	state = {
 		
 	}
+
+
+
+componentDidMount = (props) => {
+	console.log("props:", props); //undefined
+}
+
+
+
+
 	render() {
 		return (<>
 			<NavbarGroup
