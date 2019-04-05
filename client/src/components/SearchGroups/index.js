@@ -46,25 +46,9 @@ class Search extends Component {
 				<div className="col-md-1"></div>
 				<div className="col-md-8">
 
-					{/* TODO: dynamically add the groups that a user
-					is part of and make new GroupCards for each one */}
 						<GroupCard
 							groups={this.state.groups}
 						/>
-
-
-					{/* <GroupCard />
-					<GroupCard />
-					<GroupCard />
-					<GroupCard />
-					<GroupCard />
-					<GroupCard />
-					<GroupCard />
-					<GroupCard />
-					<GroupCard />
-					<GroupCard />
-					<GroupCard />
-					<GroupCard /> */}
 
 				</div>
 

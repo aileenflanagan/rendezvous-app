@@ -1,6 +1,17 @@
-#group-card{
-	width: 200px;
+.group-card-container{
+	/* width: 200px; */
 	display: inline-flex;
-	margin: 0.8rem;
+}
+
+#img-container{
+	width: 200px;
+}
+
+.group-names{
+	font-family: serif;
+	padding: 10px;
 	background-color: lightblue;
+}
+.group-cards{
+	margin: 1rem;
 }

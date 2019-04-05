@@ -4,11 +4,12 @@ import "./style.css";
 function GroupCard(props) {
 	console.log("props:", props);
 	return (
-		<div id="group-card">
+		<div className="group-card-container">
 			{props.groups.map(group => (
-				<div key={group._id}>
-					<div id="img-container">img</div>
-					<div>Group name: {group.groupName}</div>
+				<div key={group._id} className="group-cards">
+					<img id="img-container" src="https://www.akc.org/wp-content/themes/akc/component-library/assets/img/register.jpg"/>
+					<h4 className="group-names">{group.groupName}</h4>
+					<button>View Group</button>
 				</div>
 			))}
 
