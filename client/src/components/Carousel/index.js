@@ -39,7 +39,7 @@ function Carousel() {
 								<img src="images/dogs1.jpg" className="d-block w-100" alt="..." />
 								<div className="carousel-caption d-none d-md-block">
 									<h5 class="darker2">Doggy Walk Group</h5>
-									<p class="darker">"Outside? My favorite thing! Trees? My favorite thing! "We're going for a walk? I just peed on your shoe! I can't contain my excitement!"</p>
+									<p class="darker">"Outside? My favorite thing! Trees? My favorite thing! We're going for a walk? I just peed on your shoe! I can't contain my excitement!"</p>
 								</div>
 							</div>
 						</div>
