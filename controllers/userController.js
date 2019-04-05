@@ -19,7 +19,7 @@ module.exports = {
             // console.log(user)
             db.User
                 .create(user)
-                .then(data => res.josn(data))
+                .then(data => res.json(data))
                 .catch(err => console.log(err));
         })        
     },

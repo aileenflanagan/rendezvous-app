@@ -2,7 +2,8 @@ const router = require("express").Router();
 const User = require('../../models/user');
 const userController = require("../../controllers/userController");
 
-const cloudinary = require('cloudinary')
+const cloudinary = require('cloudinary');
+
 cloudinary.config({ 
   cloud_name: "dqadqluxx", 
   api_key: "618381916967669", 
@@ -13,8 +14,8 @@ const passport = require('passport');
 
 //login route /api/users/login
 router.route("/login")
-  .post(passport.authenticate('local'), 
-  function(req, res){
+  // .post(function(req, res){console.log(req.body)})
+  .post(passport.authenticate('local'), function(req, res){
     // If this function gets called, authentication was successful. 'req.user' contains the authenticated user.
     res.redirect('/') 
   });

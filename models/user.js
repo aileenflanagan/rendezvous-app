@@ -7,7 +7,6 @@ const userSchema = new Schema({
     email: { type: String, required: true },
     password: { type: String, required: true },
     location: { type: String, required: true },
-    url: {type: String},
     groupId: [{ type: String }],
     admin: [{ type: String }]
     
@@ -15,11 +14,10 @@ const userSchema = new Schema({
 
 const User = mongoose.model("User ", userSchema);
 
-User.createUser = function(newUser, callback){
+User.hashPass = function(newUser, callback){
     bcrypt.genSalt(10, function(err, salt) {
         bcrypt.hash(newUser.password, salt, null, function(err, hash) {
             newUser.password = hash;
-            // newUser.save(callback)
             callback(err, newUser)
         });
     });

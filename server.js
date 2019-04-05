@@ -1,7 +1,5 @@
-
 const formData = require('express-form-data')    
 const express = require("express");
-
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const bodyParser = require('body-parser')
@@ -27,6 +25,8 @@ app.use(bodyParser.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+
+const passport = require('./passport');
 
 // Add routes, both API and view
 app.use(routes);
