@@ -1,6 +1,6 @@
 #input-row{
 	margin-top: 5rem;
-	background: url("../../images/pencil.jpg");
+	/* background: url("../../images/pencil.jpg"); */
 }
 
 .headers{
@@ -25,7 +25,8 @@
 
 #title-div {
 	font-size: 2em;
-	font-family: cursive
+	font-family: cursive;
+	border-radius: 5px
 }
 /* Rainbow is pretty, but this should be changed to better suit some theme */
 /* html, #root{
