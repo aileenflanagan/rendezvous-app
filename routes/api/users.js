@@ -9,10 +9,7 @@ cloudinary.config({
   api_secret: "1bomeODECnYIR817uCouYk1SqPM"
 })
 
-
-=======
 const passport = require('passport');
-
 
 //login route /api/users/login
 router.route("/login")
@@ -31,39 +28,7 @@ router.route('/logout')
 // Matches with "/api/users/register"
 router
   .route("/register")
-  .post(function(req, res){
-    var username = req.body.username;
-    var email = req.body.email;
-    var password = req.body.password;
-    var location = req.body.location;
-
-    // req.checkBody('username', "Username Required").notEmpty();
-    // req.checkBody('email', "Please enter valid email").isEmail().notEmpty();
-    // req.checkBody('password', "Password Required").notEmpty();
-    // //password-2?
-    // req.checkBody('location', "Location Required").notEmpty();
-
-    var newUser = new User({
-      userName: username,
-      email: email,
-      password: password,
-      location: location          
-    })   
-
-    var errors = false;
-
-    if(errors){
-      console.log("Register error")
-    }else{          
-      res.json(newUser);
-      User.createUser(newUser, function(err, user){
-        if(err) throw err;
-        console.log("user", user);
-        userController.create(user)
-      })
-    }
-    
-  });
+  .post(userController.create);
 
 router.route("/userSave").post(function(req, res) {
   console.log("we hit the route", req.body)
