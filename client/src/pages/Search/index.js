@@ -6,8 +6,8 @@ import NavbarGroup from "../../components/NavbarGroup";
 class Search extends Component {
 	render() {
 		return (<>
-			<NavbarGroup />
-			<SearchGroups />
+			<div><NavbarGroup />
+			<SearchGroups /> </div>
 		</>);
 	}
 }

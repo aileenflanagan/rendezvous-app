@@ -4,7 +4,7 @@ import React from "react";
 function NavbarGroup(props) {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
-			<div className="navbar-brand">[Logo]</div>
+			<div className="navbar-brand"><i class="fas fa-users"></i></div>
 
 			<div className="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul className="navbar-nav mr-auto">
@@ -27,7 +27,7 @@ function NavbarGroup(props) {
 
 				</ul>
 				<div id="button-div">
-					<button className="btn btn-primary" id="signout-btn">Sign Out</button>
+					<button className="btn btn-light" id="signout-btn">Sign Out</button>
 				</div>
 			</div>
 		</nav>

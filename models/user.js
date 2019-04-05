@@ -9,6 +9,7 @@ const userSchema = new Schema({
     location: { type: String, required: true },
     groupId: [{ type: String }],
     admin: [{ type: String }]
+    
 });
 
 const User = mongoose.model("User ", userSchema);
@@ -33,8 +34,4 @@ User.comparePassword = function(passwordTry, hash, callback){
 
 
 
-<<<<<<< HEAD
 module.exports = User;
-=======
-module.exports = User;
->>>>>>> 866a2b7cfec3dd38941e4271da2f1f65340ffe52

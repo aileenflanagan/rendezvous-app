@@ -15,12 +15,13 @@ class Search extends Component {
 	}
 
 	searchGroupsKeyword = () => {
-		console.log("keyword",this.state.search);
+		console.log("keyword:",this.state.search);
 		API.findByKeywords(this.state.search)
 			.then(response => {
 				this.setState({ groups: response.data })
 				console.log("response.data: ", response.data)
 			})
+			.catch( (err) => { console.log(".catch error:", err)})
 	}
 
 	render() {
@@ -47,11 +48,9 @@ class Search extends Component {
 
 					{/* TODO: dynamically add the groups that a user
 					is part of and make new GroupCards for each one */}
-					{/* {this.state.groups.map(group => (
 						<GroupCard
-							name={group.groupName}
+							groups={this.state.groups}
 						/>
-					))} */}
 
 
 					{/* <GroupCard />

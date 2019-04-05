@@ -2,7 +2,7 @@ const db = require('../models');
 
 module.exports = {
     findAll: function(req, res){
-        db.Groups
+        db.Group
             .find(req.query)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
@@ -10,7 +10,7 @@ module.exports = {
 
     findByKeywords: function(req, res){
         console.log("findbykeywords, groupcontroller");
-        db.Groups
+        db.Group
             .find({groupName: { $regex: `${req.params.keyword}`, $options: "i" }})
             .then(dbModel => res.json(dbModel), console.log("On: groupController.js"))
             .catch(err => res.status(422).json(err));
@@ -23,19 +23,19 @@ module.exports = {
     //         .catch(err => res.status(422).json(err));
     // },
     create: function(req, res){
-        db.Groups
+        db.Group
             .create(req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
     update: function(req, res) {
-        db.Groups
+        db.Group
         .findOneAndUpdate({_id: req.params.id}, req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
     remove: function(req, res){
-        db.Groups
+        db.Group
         .find(req.query)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));

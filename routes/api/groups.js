@@ -17,6 +17,8 @@ router
 router
   .route("/search/:keyword")
   .get(groupController.findByKeywords);
+
+  
 // make new route to findbykeyword
 // /keyword
 // in your axios /api/keyword
