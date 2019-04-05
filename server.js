@@ -1,11 +1,6 @@
-
 const formData = require('express-form-data')    
 const express = require("express");
-var bodyParser = require('body-parser')
-
-
 const express = require("express");
-
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const bodyParser = require('body-parser')

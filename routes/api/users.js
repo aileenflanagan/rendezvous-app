@@ -11,7 +11,6 @@ cloudinary.config({
 
 const passport = require('passport');
 
-
 //login route /api/users/login
 router.route("/login")
   .post(passport.authenticate('local'), function(req, res){
