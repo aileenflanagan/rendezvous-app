@@ -11,9 +11,10 @@ const userSchema = new Schema({
     admin: [{ type: String }]
 });
 
-const User = mongoose.model("User ", userSchema);
+const User = mongoose.model("User", userSchema);
 
-User.createUser = function(newUser, callback){
+//Password encryption
+User.hashPass = function(newUser, callback){
     bcrypt.genSalt(10, function(err, salt) {
         bcrypt.hash(newUser.password, salt, null, function(err, hash) {
             newUser.password = hash;
@@ -30,7 +31,5 @@ User.comparePassword = function(passwordTry, hash, callback){
         callback(null, isMatch)
     });
 }
-
-
 
 module.exports = User;
