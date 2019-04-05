@@ -15,7 +15,7 @@ function NavbarHome() {
 					
 					<li className="nav-item dropdown">
 						<a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Dropdown
+							Rendezvous
         				</a>
 						<div className="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a className="dropdown-item" href="#">Group 1</a>
@@ -28,7 +28,7 @@ function NavbarHome() {
 
 				</ul>
 				<div id="button-div">
-					<button className="btn btn-Light home-buttons" id="login-btn">Login</button>
+					<a className="btn btn-Light home-buttons" id="login-btn" href="/login">Login</a>
 					<a className="btn btn-Light home-buttons" id="create-acct-btn" href="/signup">Create account</a>
 				</div>
 			</div>
