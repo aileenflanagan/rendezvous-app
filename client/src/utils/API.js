@@ -1,10 +1,10 @@
-import axios from "axios";
+// import axios from "axios";
 
-export default {
+// export default {
 
-	findByKeywords: function () {
-		return axios.get("/");
-	}
+// 	findByKeywords: function () {
+// 		return axios.get("/");
+// 	}
 	//root2{
 
 	// }
@@ -12,4 +12,4 @@ export default {
 	//root3{
 
 	// }
-}
+// }
