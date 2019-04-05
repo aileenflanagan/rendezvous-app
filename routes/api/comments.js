@@ -5,5 +5,7 @@ const commentsController = require("../../controllers/commentsController")
 // this is the /api/comments/:groupId route
 router.route('/:groupId')
     .get(commentsController.findById)
-    .post(commentsController.create);
+    .post(commentsController.create)
+    .delete(commentsController.remove);
 
+    module.exports = router;

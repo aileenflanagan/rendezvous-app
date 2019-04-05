@@ -3,7 +3,7 @@ import "./style.css";
 
 function Carousel() {
 	return (
-		<div className="row">
+		<div id="color" className="row">
 			<div className="col-md-3"></div>
 			<div className="col-md-6" id="carousel-div">
 				<div className="bd-example">
@@ -15,25 +15,31 @@ function Carousel() {
 						</ol>
 						<div className="carousel-inner">
 							<div className="carousel-item active">
-							{/* placeholder image */}
-								<img src="https://flgowrley.files.wordpress.com/2016/12/writing-group-1.jpg?w=1140" className="d-block w-100" alt="..." />
+								<img src="images/people-working.jpg" className="d-block w-100" alt="..." />
 								<div className="carousel-caption d-none d-md-block">
-									<h5>First slide label</h5>
-									<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+									<h5 class="darker2">Writers Group</h5>
+									<p class="darker">"Looking for new members! Join us, we're fun!"</p>
 								</div>
 							</div>
 							<div className="carousel-item">
-								<img src="https://content.active.com/Assets/Active.com+Content+Site+Digital+Assets/Fitness/580x350/Secrets+of+People+Who+Love+to+Work+Out/Secret+8.jpg" className="d-block w-100" alt="..." />
+								<img src="images/awesome_720.jpg" className="d-block w-100" alt="..." />
 								<div className="carousel-caption d-none d-md-block">
-									<h5>Second slide label</h5>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+									<h5 class="darker2">Photography Group</h5>
+									<p class="darker">"Click goes the camera!"</p>
 								</div>
 							</div>
 							<div className="carousel-item">
-								<img src="http://azure.wgp-cdn.co.uk/app-yourdog/posts/dog_walking_groups.jpg?&width=1200&height=630&mode=crop" className="d-block w-100" alt="..." />
+								<img src="images/people-exercising.jpg" className="d-block w-100" alt="..." />
 								<div className="carousel-caption d-none d-md-block">
-									<h5>Third slide label</h5>
-									<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+									<h5 class="darker2">Hardcore Workout Group</h5>
+									<p class="darker">"Leave your tears at home! We want to train hard and will push you to your ideal weight!"</p>
+								</div>
+							</div>
+							<div className="carousel-item">
+								<img src="images/dogs1.jpg" className="d-block w-100" alt="..." />
+								<div className="carousel-caption d-none d-md-block">
+									<h5 class="darker2">Doggy Walk Group</h5>
+									<p class="darker">"Outside? My favorite thing! Trees? My favorite thing! "We're going for a walk? I just peed on your shoe! I can't contain my excitement!"</p>
 								</div>
 							</div>
 						</div>

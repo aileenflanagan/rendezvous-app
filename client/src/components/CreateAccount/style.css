@@ -1,6 +1,6 @@
 #input-row{
 	margin-top: 5rem;
-	background: url("../../images/pencil.jpg");
+	/* background: url("../../images/pencil.jpg"); */
 }
 
 .headers{
@@ -12,6 +12,21 @@
 	margin: auto;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
+}
+
+#color2 {
+	background: rgb(226, 225, 225)
+}
+
+#description-div {
+	font-size: 1em;
+	font-family: 'Times New Roman', Times, serif
+}
+
+#title-div {
+	font-size: 2em;
+	font-family: cursive;
+	border-radius: 5px
 }
 
 /* Rainbow is pretty, but this should be changed to better suit some theme */
@@ -26,3 +41,4 @@
 		rgba(76, 0, 130, 0.8),
 		rgba(238, 130, 238, 0.8));
 } */
+

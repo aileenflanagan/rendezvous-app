@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const commentSchema = new Schema({
+const commentsSchema = new Schema({
     userId: { type: String, required: true },
     description: { type: String, required: true},
     date: { type: Date, default: Date.now },
@@ -9,6 +9,6 @@ const commentSchema = new Schema({
     // dislike: { type: String }
 });
 
-const Comment = mongoose.model("Comment", commentSchema);
+const Comments = mongoose.model("Comments", commentsSchema);
 
-module.exports = Comment;
+module.exports = Comments;
