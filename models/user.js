@@ -10,6 +10,7 @@ const userSchema = new Schema({
     url: {type: String},
     groupId: [{ type: String }],
     admin: [{ type: String }]
+    
 });
 
 const User = mongoose.model("User ", userSchema);

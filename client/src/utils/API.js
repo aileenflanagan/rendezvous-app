@@ -1,15 +1,12 @@
-// import axios from "axios";
+import axios from "axios";
 
-// export default {
+export default {
 
-// 	findByKeywords: function () {
-// 		return axios.get("/");
-// 	}
-	//root2{
+	findByKeywords: function (keyword) {
+		console.log("On: API.js");
+		console.log("keyword:", keyword);
+		return axios.get("/api/groups/search/" + keyword);
+	}
 
-	// }
 
-	//root3{
-
-	// }
-// }
+};
