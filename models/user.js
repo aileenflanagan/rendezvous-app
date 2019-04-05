@@ -9,6 +9,7 @@ const userSchema = new Schema({
     location: { type: String, required: true },
     groupId: [{ type: String }],
     admin: [{ type: String }]
+    
 });
 
 const User = mongoose.model("User ", userSchema);

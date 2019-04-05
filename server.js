@@ -1,4 +1,11 @@
+
+const formData = require('express-form-data')    
 const express = require("express");
+var bodyParser = require('body-parser')
+
+=======
+const express = require("express");
+
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const bodyParser = require('body-parser')
@@ -9,6 +16,12 @@ const PORT = process.env.PORT || 3001;
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(formData.parse());
+// app.use(bodyParser.json({ type: 'application/*+json' }));
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+}));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

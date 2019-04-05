@@ -1,8 +1,13 @@
 {
   "dependencies": {
+
+    "cloudinary": "^1.14.0",
+=======
     "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.18.3",
+
     "express": "^4.16.4",
+    "express-form-data": "^2.0.8",
     "mongo": "^0.1.0",
     "mongoose": "^5.4.20",
     "passport": "^0.4.0",
