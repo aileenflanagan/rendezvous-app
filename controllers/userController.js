@@ -2,19 +2,19 @@ const db = require('../models');
 
 module.exports = {
     create: function(req, res){
-        db.Users
+        db.User
             .create(req.body)
-            .then(dbModel => res.json(dbModel))
-            .catch(err => res.status(422).json(err));
+            // .then(dbModel => res.json(dbModel))
+            .catch(err => console.log(err));
     },
     update: function(req, res){
-        db.Users
+        db.User
             .find(req.query)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
     remove: function(req, res){
-        db.Users
+        db.User
             .find(req.query)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
