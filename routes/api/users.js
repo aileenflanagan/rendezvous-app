@@ -15,10 +15,7 @@ const passport = require('passport');
 //login route /api/users/login
 router.route("/login")
   // .post(function(req, res){console.log(req.body)})
-  .post(passport.authenticate('local'), function(req, res){
-    // If this function gets called, authentication was successful. 'req.user' contains the authenticated user.
-    res.redirect('/') 
-  });
+  .post((req, res) => passport.authenticate('local', { successRedirect: '/Sucess', failureRedirect: '/Fail', })(req, res));
 
 //logout
 router.route('/logout')

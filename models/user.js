@@ -12,7 +12,7 @@ const userSchema = new Schema({
     
 });
 
-const User = mongoose.model("User ", userSchema);
+const User = mongoose.model("User", userSchema);
 
 User.hashPass = function(newUser, callback){
     bcrypt.genSalt(10, function(err, salt) {
@@ -30,7 +30,5 @@ User.comparePassword = function(passwordTry, hash, callback){
         callback(null, isMatch)
     });
 }
-
-
 
 module.exports = User;
