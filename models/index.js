@@ -1,5 +1,5 @@
 module.exports = {
     Comment: require("./comment"),
-    Group: require("./group"),
+    Groups: require("./group"),
     User: require("./user"),
 };
