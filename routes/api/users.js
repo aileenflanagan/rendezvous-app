@@ -37,19 +37,7 @@ router.route("/userSave").post(function(req, res) {
     .all(promises)
     .then(results => console.log('these are our results!!!', results))
   // console.log("heres our pics", values)
-})
-
-//........................................
-// Matches with "/api/users"
-router.route("/")
-  .get(userController.findAll);
-
-  // Matches with "/api/users/:id"
-router.route("/:id")
-  .get(userController.findById)
-  .put(userController.update)
-  .delete(userController.remove)
-  
+})  
 
 module.exports = router;
 
