@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import NavbarSignup from "../../components/NavbarSignup/index";
-import Login from "../../components/Login";
+
+import Logins from "../../components/Logins";
 
 class Login extends Component {
 	state = {
@@ -9,7 +10,7 @@ class Login extends Component {
 	render() {
 		return (<>
 			<NavbarSignup />
-			<Login />
+			<Logins />
 		</>);
 	}
 }

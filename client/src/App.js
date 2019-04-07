@@ -7,6 +7,7 @@ import Signup from "./pages/Signup";
 import CreateGroup from "./pages/CreateGroup";
 import Search from "./pages/Search";
 import Manage from "./pages/ManageGroups";
+import Login from "./pages/Login";
 
 const App = () => (
   <Router>
@@ -17,6 +18,7 @@ const App = () => (
       <Route exact path="/createGroup" component={CreateGroup}/>
       <Route exact path="/search" component={Search}/>
       <Route exact path="/manage" component={Manage}/>
+      <Route exact path="/login" component={Login}/>
     </div>
   </Router>
 );
