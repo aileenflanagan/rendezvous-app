@@ -6,7 +6,7 @@ console.log('in index aip routes')
 // Routes
 router.use("/groups", groupRoutes);
 
-// router.use("/comments", commentRoutes);
+router.use("/comments", commentRoutes);
 router.use("/users", userRoutes);
 
 module.exports = router;
