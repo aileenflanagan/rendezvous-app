@@ -8,8 +8,10 @@
 #create-acct-btn{
 	margin-left: 1rem;
 }
-#logo{
-	color: red;
-	font-size: 28px;
-	font-weight: bold
+#logo{	
+	font-size: 25px;	
+	font-family: cursive;
+}
+.nav-link{
+	font-family: cursive;
 }

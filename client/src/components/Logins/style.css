@@ -1,0 +1,32 @@
+#input-row{
+	margin-top: 5rem;	
+}
+
+/* .headers{ */
+	/* margin-top: 1rem; */
+	/* background-color: rgba(121, 112, 112, 0.5	); */
+	/* border-radius: 5px;
+	padding: .5rem; */
+	/* display: block; */
+/* } */
+
+#signup-btn{
+	margin: auto;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+#color2 {
+	background: rgb(226, 225, 225)
+}
+
+#description-div {
+	font-size: 1em;
+	font-family: 'Times New Roman', Times, serif
+}
+
+#title-div {
+	font-size: 2em;
+	font-family: cursive;
+	border-radius: 5px
+}
