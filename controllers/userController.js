@@ -23,36 +23,22 @@ module.exports = {
                 .catch(err => console.log(err));
         })        
     },
-    
-    //......................................
-    findAll: function(req, res){
+    update: function(req, res){
         db.User
             .find(req.query)
-            .then(dbModel => res.json(dbModel))
-            .catch(err => res.status(422).json(err));
+            .then(data => res.json(data))
+            .catch(err => console.log(err));
     },
-    //......................................
-
-    findById: function(req, res) {
-        db.User.findById(req.params.id)    
-          .then(dbUsers => res.json(dbUsers))
-          .catch(err => res.status(422).json(err));
-      },
-
-    //.....................................
-
-    update: function(req, res) {
+    remove: function(req, res){
         db.User
-        .findOneAndUpdate({_id: req.params.id}, req.body)
-            .then(dbModel => res.json(dbModel))
-            .catch(err => res.status(422).json(err));
+            .find(req.query)
+            .then(data => res.json(data))
+            .catch(err => console.log(err));
     },
-    remove: function(req, res) {
-        db.User.findById(req.params.id)
-          .then(dbUsers => dbUsers.remove())
-          .then(dbUsers => res.json(dbUsers))
-          .catch(err => res.status(422).json(err));
-      },
-
-
+    find: function(req, res){
+        db.User
+            .find(req.query)
+            .then(data => res.json(data))
+            .catch(err => console.log(err));
+    }
 }
