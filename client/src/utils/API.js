@@ -15,12 +15,20 @@ export default {
 	},
 
 	userLogin: function(loginObj){
-		// console.log("keyword:", keyword);
-		// return axios.get("/api/user/login");
+		console.log("Login Info", loginObj);
+
+		return axios.post("/api/users/login", loginObj);
+
+		// return axios.post("/api/users/login",{
+		// 	email: loginObj.email,
+		// 	password: loginObj.password
+		// });
 	},
 
-	createNewUser: function(){
-
+	createNewUser: function(newUserObj){
+		return axios.post("/api/users/register",{
+			//newUserObj key: value pairs
+		});
 	},
 
 };
