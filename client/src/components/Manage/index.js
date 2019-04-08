@@ -20,7 +20,7 @@ class ManageGroups extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			image:""
+			image: "http://res.cloudinary.com/dqadqluxx/image/upload/v1554761308/xpqkcuij73ojzaadealv.jpg"
 		}
 	}
 	fileSelectedHandler = (event) => {
@@ -39,7 +39,12 @@ class ManageGroups extends React.Component {
 		}
 	}).then(function (data) {
 		console.log("pic we got back", data)
+		this.setState ({
+			uploadedFile: files[0]
+		});
+		this.fileSelectedHandler(files[0]);
 	})
+
 	}
 	render () {
 
@@ -49,10 +54,12 @@ class ManageGroups extends React.Component {
 		<div className="row">
 			<div className="col-md-1"></div>
 			{/* Profile Pic */}
-			<div className="col-md-3" id="profile-pic-div">[current profile pic] <input  
-            type="file" 
-            id="upload" 
-            onChange = {this.fileSelectedHandler} /> </div>
+			<div className="col-md-3" id="profile-pic-div">[current profile pic]
+			<img src={this.state.image} alt="boohoo" style={{ width: "100px", height: "100px"}} className="img-responsive"/> 
+			<input type="file" id="upload" accept="image/*" onChange = {this.fileSelectedHandler} />
+			<button onClick={this.uploadHandler}>Upload!</button>
+ 
+				</div>
 			<div className="col-md-1"></div>
 
 			{/* User Info */}
@@ -80,7 +87,7 @@ class ManageGroups extends React.Component {
 
 				<div>[group card component goes here: group image, group name]</div>	{/* temporary */}
 
-				<GroupCard />
+				{/* <GroupCard /> */}
 				{/* <GroupCard />
 					<GroupCard />
 					<GroupCard />
@@ -101,9 +108,9 @@ class ManageGroups extends React.Component {
 			<div className="col-md-1"></div>
 			<div className="col-md-10" id="created-groups-div">
 				<div>[group card component goes here: group image, group name, reassign btn, delete btn]</div>	{/* temporary */}
-				<GroupCard
+				{/*<GroupCard
 					groupName={"props.groupName"}
-				/>
+				/>*/}
 
 
 			</div>

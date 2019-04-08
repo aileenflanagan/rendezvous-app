@@ -8,7 +8,7 @@ cloudinary.config({
   cloud_name: "dqadqluxx", 
   api_key: "618381916967669", 
   api_secret: "1bomeODECnYIR817uCouYk1SqPM"
-})
+});
 
 const passport = require('passport');
 

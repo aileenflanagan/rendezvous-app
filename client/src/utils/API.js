@@ -17,7 +17,7 @@ export default {
 	userLogin: function(loginObj){
 		console.log("Login Info", loginObj);
 
-		return axios.post("/api/users/login", loginObj);
+		return axios.post("http://localhost:3001/api/users/login", loginObj);
 
 		// return axios.post("/api/users/login",{
 		// 	email: loginObj.email,
