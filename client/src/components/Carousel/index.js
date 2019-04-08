@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-
+// document.body.style.overflow = "hidden"
 function Carousel() {
 	return (
 		<div id="color" className="row">
