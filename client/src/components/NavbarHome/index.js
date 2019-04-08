@@ -18,10 +18,10 @@ function NavbarHome() {
 							Rendezvous
         				</a>
 						<div className="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a className="dropdown-item" href="#">Group 1</a>
+							<a className="dropdown-item" href="/group">Group 1</a>
 							<a className="dropdown-item" href="#">Group 2</a>
 							<div className="dropdown-divider"></div>
-							<a className="dropdown-item" href="#">Manage my groups</a>
+							<a className="dropdown-item" href="/manage">Manage my groups</a>
 						</div>
 
 					</li>

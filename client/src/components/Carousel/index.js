@@ -12,7 +12,7 @@ function Carousel() {
 							<li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
 							<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
 							<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-							<li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+							
 						</ol>
 						<div className="carousel-inner">
 							<div className="carousel-item active">
@@ -33,16 +33,10 @@ function Carousel() {
 								<img src="images/people-exercising.jpg" className="d-block w-100" alt="..." />
 								<div className="carousel-caption d-none d-md-block">
 									<h5 class="darker2">Hardcore Workout Group</h5>
-									<p class="darker">"Leave your tears at home! We want to train hard and will push you to your ideal weight!"</p>
+									<p class="darker">"Pain is weakness leaving the body!"</p>
 								</div>
 							</div>
-							<div className="carousel-item">
-								<img src="images/dogs1.jpg" className="d-block w-100" alt="..." />
-								<div className="carousel-caption d-none d-md-block">
-									<h5 class="darker2">Doggy Walk Group</h5>
-									<p class="darker">"Outside? My favorite thing! Trees? My favorite thing! We're going for a walk? I just peed on your shoe! I can't contain my excitement!"</p>
-								</div>
-							</div>
+							
 						</div>
 						<a className="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
 							<span className="carousel-control-prev-icon" aria-hidden="true"></span>
