@@ -1,34 +1,40 @@
 
 use rendezvousdb
-
 db.user.find().pretty()
 
-
-db.user.insertOne({
-		"userName": "jdoe", 
-		"email": "jdoe@email.com",
+db.users.insertOne({
+		"userName": "TestUser1", 
+		"email": "TestUser1@email.com",
 		"password": "password1",
-		"location": "MN", 
-		"groupId": "001",
-		"admin": "Yes"})
-                
-use rendezvousdb              
-db.groups.insertOne({
-		"groupName":"Group Doe",   
-		"adminId": "jdoe",                              
-		"private": "true",
-                "meeting": {"name": "Test Meeting Name",
-                            "Time": "04:20 PM",
-                            "location": {"state": "MN", 
-                                        "city": "Minneapolis", 
-                                        "address": "99 Address1",
-                                        "zip": "55101"},
-                              },
-			})
+		"zipCode": "55101", 
+		"groupId": ["GroupId001", "GroupId002"],
+		"admin": ["Admin001", "Admin002"]                
+                })
 
-db.comment.insertOne({
-                "userId": " ", 
-                "description": " ", 
-                "date": "",
+            
+db.groups.insertOne({
+                "groupName": "Group7", 
+                "adminID": "admin7", 
+                "private": "false", 
+                
+                "meeting": {
+                        "name": "Meeting Name 7",
+                        "time": "11:00am",
+                        "date": "May 1st", 
+
+                        "location": {
+                                "state": "IL", 
+                                "city": "Fantasy Island", 
+                                "address": "99 Test Adress 7", 
+                                "zip": "12345"
+                                }
+                            }
+                    })
+                    
+
+db.comments.insertOne({
+                "userId": "commentsUserId001", 
+                "groupId": "TestGroupId001", 
+                "description": "This is a test...",
                 "like": " " })
                 

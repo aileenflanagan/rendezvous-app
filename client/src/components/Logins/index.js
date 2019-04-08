@@ -20,7 +20,15 @@ class Logins extends React.Component {
 			email: this.state.email,
 			password: this.state.password
 		}
-		API.userLogin(loginObj);
+
+		API.userLogin(loginObj).then(response => {
+			console.log("Correct Password");			
+
+			window.location.href = "/"
+		}).catch(err => {
+			console.log("LOGIN ERR0R", err);
+			alert('Password or Email Incorrect')
+		});
 	}
 
 	render(){
@@ -29,7 +37,7 @@ class Logins extends React.Component {
 			<div id="color" className="row">
 					<div className="col-md-2"></div>
 					<div className="col-md-8" id="title-div">
-					Log in
+						Log in
 						
 						</div>
 					</div>		

@@ -1,5 +1,7 @@
 #input-row{
-	margin-top: 5rem;	
+	margin-top: 10rem;	
+	background: url(../../images/quote.jpg);
+	height: 20em;
 }
 
 /* .headers{ */

@@ -13,9 +13,8 @@ cloudinary.config({
 const passport = require('passport');
 
 //login route /api/users/login
-router.route("/login")
-  // .post(function(req, res){console.log(req.body)})
-  .post((req, res) => passport.authenticate('local', { successRedirect: '/', failureRedirect: '/login', })(req, res));
+router.route("/login")  
+  .post((req, res) => passport.authenticate('local', { successRedirect: '/', failureRedirect: '/fail'})(req, res));
 
 //logout
 router.route('/logout')
@@ -35,7 +34,7 @@ router.route("/userSave").post(function(req, res) {
   
   Promise
     .all(promises)
-    .then(results => console.log('these are our results!!!', results))
+    .then(results => res.json(results))
   // console.log("heres our pics", values)
 })
 

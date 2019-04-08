@@ -13,30 +13,16 @@ class Search extends Component {
 	}
 
 	handleInputChange = event => {
-		// console.log("event.target.value: ", event.target.value)
 		this.setState({ search: event.target.value })
 	}
 
 	searchGroupsKeyword = () => {
-		// console.log("keyword:",this.state.search);
 		API.findByKeywords(this.state.search)
 			.then(response => {
 				this.setState({ groups: response.data })
 				console.log("response.data: ", response.data)
 			})
 			.catch((err) => { console.log(".catch error:", err) })
-	}
-
-
-	findById = id => {
-		console.log("The clicked button's id is:", id);
-		API.findById(id)
-			.then(response => {
-				console.log("response123:", response.data);
-				// NEXT STEP: BRING RESPONSE.DATA INTO THE GROUP PAGE
-				this.setState({ findById: response.data});
-				// console.log("this.state.findById: ", this.state.findById);
-			})
 	}
 
 
@@ -64,7 +50,6 @@ class Search extends Component {
 
 					<GroupCard
 						groups={this.state.groups}
-						findById={this.findById}
 					/>
 
 				</div>

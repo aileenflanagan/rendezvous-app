@@ -27,7 +27,18 @@ class CreateAccount extends Component {
 			password: this.state.password
 		}
 
-		API.createNewUser(newUserObj);
+		API.createNewUser(newUserObj)
+			.then(response => {	
+				let message = response.data.statusText		
+				if(message === "Exists"){
+					//Say email already exists
+					console.log("this exists")
+					alert('Email already exists')
+				}else if(message === "Creating"){
+					window.location.href = "/"
+				}
+			})
+			.catch(err => {console.log(err)});
 	}
 
 	render() {
@@ -44,7 +55,8 @@ class CreateAccount extends Component {
 			</div>
 
 
-			<div className="row" id="input-row">
+
+			<div className="row" id="input-row2">
 				<div className="col-md-5"></div>
 				<div className="col-md-2">
 					<div className="headers">First Name:</div>

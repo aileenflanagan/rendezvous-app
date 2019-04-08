@@ -1,10 +1,13 @@
 #carousel-div{
 	margin-top: 2rem;
+	margin-bottom: 2rem;
 	padding: 0;
+	
 }
 
 .carousel-item{
 	height: 500px;
+	
 }
 
 #color {
@@ -22,8 +25,8 @@
 	color: white;
 	margin: auto;
 }
-img{
-	height: 40rem;
-	/* width: 20rem */
+
+#car {
+    height: 30rem;    
 }
 
