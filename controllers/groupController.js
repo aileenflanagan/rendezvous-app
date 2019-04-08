@@ -8,6 +8,15 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
 
+    findById: function(req, res){
+        console.log("findbyid, groupcontroller");
+        db.Group
+            // .find({groupId: { $regex: `${req.params.id}`, $options: "i" }})
+            .find({"_id": req.params.id})
+            .then(dbModel => res.json(dbModel), console.log("On: groupController.js"))
+            .catch(err => res.status(422).json(err));
+    },
+    
     findByKeywords: function(req, res){
         console.log("findbykeywords, groupcontroller");
         db.Group
