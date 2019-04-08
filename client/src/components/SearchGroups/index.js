@@ -1,28 +1,44 @@
 import React, { Component } from "react";
 import "./style.css";
 import GroupCard from "../GroupCard";
+import Group from "../../pages/Group";
 import API from "../../utils/API";
 
 class Search extends Component {
 	state = {
 		groups: [],
-		search: ''
+		search: "",
+		groupid: "",
+		findById: ""
 	}
 
 	handleInputChange = event => {
-		console.log("event.target.value: ", event.target.value)
+		// console.log("event.target.value: ", event.target.value)
 		this.setState({ search: event.target.value })
 	}
 
 	searchGroupsKeyword = () => {
-		console.log("keyword:",this.state.search);
+		// console.log("keyword:",this.state.search);
 		API.findByKeywords(this.state.search)
 			.then(response => {
 				this.setState({ groups: response.data })
 				console.log("response.data: ", response.data)
 			})
-			.catch( (err) => { console.log(".catch error:", err)})
+			.catch((err) => { console.log(".catch error:", err) })
 	}
+
+
+	findById = id => {
+		console.log("The clicked button's id is:", id);
+		API.findById(id)
+			.then(response => {
+				console.log("response123:", response.data);
+				// NEXT STEP: BRING RESPONSE.DATA INTO THE GROUP PAGE
+				this.setState({ findById: response.data});
+				// console.log("this.state.findById: ", this.state.findById);
+			})
+	}
+
 
 	render() {
 		return (<>
@@ -46,9 +62,10 @@ class Search extends Component {
 				<div className="col-md-1"></div>
 				<div className="col-md-8">
 
-						<GroupCard
-							groups={this.state.groups}
-						/>
+					<GroupCard
+						groups={this.state.groups}
+						findById={this.findById}
+					/>
 
 				</div>
 

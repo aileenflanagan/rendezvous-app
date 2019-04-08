@@ -3,13 +3,11 @@ import SearchGroups from "../../components/SearchGroups";
 import NavbarGroup from "../../components/NavbarGroup";
 
 
-class Search extends Component {
-	render() {
-		return (<>
-			<div><NavbarGroup />
-			<SearchGroups /> </div>
-		</>);
-	}
+function Search(props) {
+	return (<>
+		<NavbarGroup />
+		<SearchGroups />
+	</>);
 }
 
 export default Search;
