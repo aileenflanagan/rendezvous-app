@@ -2,16 +2,14 @@
 use rendezvousdb
 db.user.find().pretty()
 
-
 db.users.insertOne({
-		"userName": "jdoe", 
-		"email": "jdoe@email.com",
+		"userName": "TestUser1", 
+		"email": "TestUser1@email.com",
 		"password": "password1",
-		"location": "MN", 
-		"groupId": "001",
-		"admin": "Yes"})
-                
-
+		"zipCode": "55101", 
+		"groupId": ["GroupId001", "GroupId002"],
+		"admin": ["Admin001", "Admin002"]                
+                })
 
             
 db.groups.insertOne({
@@ -35,9 +33,8 @@ db.groups.insertOne({
                     
 
 db.comments.insertOne({
-                "userId": " ", 
-                "groupId": " ",
-                "description": " ", 
-                "date": "",
+                "userId": "commentsUserId001", 
+                "groupId": "TestGroupId001", 
+                "description": "This is a test...",
                 "like": " " })
                 
