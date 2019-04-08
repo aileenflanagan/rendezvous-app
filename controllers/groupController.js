@@ -40,9 +40,13 @@ findById: function(req, res) {
 
 //........................................................
 
-    findByKeywords: function(req, res){
-        db.Groups
-            .find({groupName: { $regex: `${req.params.searchTerm}`, $options: "i" }})
-    },
+findById: function(req, res){
+    console.log("findbyid, groupcontroller");
+    db.Group
+        // .find({groupId: { $regex: `${req.params.id}`, $options: "i" }})
+        .find({"_id": req.params.id})
+        .then(dbModel => res.json(dbModel), console.log("On: groupController.js"))
+        .catch(err => res.status(422).json(err));
+},
     
 }

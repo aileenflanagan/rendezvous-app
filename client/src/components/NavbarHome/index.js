@@ -27,7 +27,7 @@ function NavbarHome() {
 					</li>
 
 				</ul>
-				<div  id="button-div">
+				<div   id="button-div">
 					<a className="btn btn-Light home-buttons" id="login-btn" href="/login">Log in</a>
 					<a className="btn btn-Light home-buttons" id="create-acct-btn" href="/signup">Create account</a>
 				</div>
