@@ -4,18 +4,22 @@ var Schema = mongoose.Schema;
 var groupsSchema = new Schema({
   
     groupName:{type: String, 
-              required: true},
+              required: true,
+              unique: true},
 
     adminID: {type: String},            
     
     meeting: {
               name: {type: String},                            
-              Time: {type: String},
+              time: {type: String},
+              date: {type: String},
+
               location: {
-                        state: String, 
-                        city: String,
-                        address: String,
-                        zip: String},            
+                        state: {type: String}, 
+                        city: {type: String},
+                        address: {type: String},
+                        zip: {type: String}
+                        }            
               },   
                 
     private: {type: Boolean},

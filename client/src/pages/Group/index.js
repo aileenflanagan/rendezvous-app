@@ -1,73 +1,85 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import "./style.css";
 import NavbarGroup from "../../components/NavbarGroup";
-
-import GroupInfo from "../../components/GroupInfo";
-// import GroupPic from "../../components/GroupPic";
-
-import Meetings from "../../components/Meetings";
-// import Discussions from "../../components/Discussions";
+import API from "../../utils/API";
 
 
 class Group extends Component {
 	state = {
-		
+		groupName: ""
 	}
 
 
 
-componentDidMount = (props) => {
-	console.log(props);
+	componentDidMount() {
+		// console.log("test", this.props.match.params.id);
+
+		API.findById(this.props.match.params.id)
+			.then(response => {
+
+				console.log("response123:", response.data);
+				// this.setState({ findById: response.data });
+				console.log("response.data.groupName: ", response.data[0].groupName)
+				this.setState({ groupName: response.data[0].groupName })
+
+			})
 
 
 
 
-	
-}
+
+	}
 
 
 
 
 	render() {
 		return (<>
-			<NavbarGroup
-				name={"[get name from db]"}
-			/>
+			<NavbarGroup />
 
 
 			<div className="row" id="main-row">
 				<div className="col-md-1"></div>
 				<div className="col-md-4 info-div">
-					<GroupInfo />
+					<h1>{this.state.groupName}</h1>
 				</div>
 				<div className="col-md-2"></div>
 				<div className="col-md-4 info-div">
-					{/* <GroupPic /> */}[Group Picture goes here]
-			</div>
-			</div>
-
-
-			<div className="row">
-				<div className="col-md-1"></div>
-				<div className="col-md-4 info-div">
-					<Meetings />
+					[Group Picture goes here]
 				</div>
-				<div className="col-md-2"></div>
-				<div className="col-md-4 info-div">
-					{/* <Discussions /> */}[Discussion Board go here]
-			</div>
 			</div>
 
 
+			{/* Meeting/Location */}
 			<div className="row">
 				<div className="col-md-1"></div>
-				<div className="col-md-4 info-div">
-					{/* <Members /> */}[Group Members go here]
+				<div className="col-md-10 info-div">
+					
+				</div>
+				<div className="col-md-1"></div>
 			</div>
-				<div className="col-md-2"></div>
-				<div className="col-md-4 info-div">
-					{/* <Goals /> */}[Goals go here]
+
+
+
+
+
+			{/* Discussion Board */}
+			<div className="row">
+				<div className="col-md-1"></div>
+				<div className="col-md-10 info-div">
+					[Discussion Board go here]
+				</div>
+				<div className="col-md-1"></div>
 			</div>
+
+
+			{/* Group Members */}
+			<div className="row">
+				<div className="col-md-1"></div>
+				<div className="col-md-10 info-div">
+					[Group Members go here]
+				</div>
+				<div className="col-md-1"></div>
 			</div>
 
 		</>);

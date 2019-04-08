@@ -16,7 +16,7 @@ router.route("/:id")
 //.................................
 
 
-  // Matches with "/api/:keyword"
+  // Matches with "/api/groups/search/:keyword"
 router.route("/search/:keyword")
   .get(groupController.findByKeywords);
 
