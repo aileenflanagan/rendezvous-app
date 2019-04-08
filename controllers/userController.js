@@ -11,10 +11,8 @@ module.exports = {
         db.User.find({email: email}, function(err, found){
             if(found.length>0){
                 console.log("Found!", found[0].email);
-                return res.json({message:"Already Exists"})
+                return res.json({statusText:"Exists"});
             }else{
-                // res.json({message:"Does Not Exist...Creatinggggg"});
-
                 let newUser = new db.User({
                     userName: username,
                     email: email,
@@ -26,7 +24,7 @@ module.exports = {
                     if(err) throw err;
                     db.User
                         .create(user)
-                        .then(data => res.json(data))
+                        .then(() => res.json({statusText:"Creating"}))
                         .catch(err => console.log(err));
                 })
             }            
