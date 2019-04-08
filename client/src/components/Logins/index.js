@@ -24,7 +24,7 @@ function Logins() {
 				<div className="headers">Password:</div>
 				<input type="password" id="password"></input>	
 
-				<button className="btn btn-dark btn-sm" id="signup-btn">Log in</button>			
+				<button className="btn btn-dark btn-sm" id="login-btn">Log in</button>			
 
 			</div>
 

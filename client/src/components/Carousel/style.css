@@ -1,11 +1,11 @@
 #carousel-div{
 	margin-top: 2rem;
-	padding: 0;
+	/* padding: 0; */
 }
 
-.carousel-item{
-	height: 500px;
-}
+/* .carousel-item{
+	height: auto;
+} */
 
 #color {
 	background: #DEF2F1;
