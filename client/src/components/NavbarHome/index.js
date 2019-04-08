@@ -28,6 +28,7 @@ function NavbarHome() {
 
 				</ul>
 				<div   id="button-div">
+					<a className="btn btn-Light home-buttons" id="create-btn" href="/creategroup">Create Group</a>
 					<a className="btn btn-Light home-buttons" id="login-btn" href="/login">Log in</a>
 					<a className="btn btn-Light home-buttons" id="create-acct-btn" href="/signup">Create account</a>
 				</div>
