@@ -2,10 +2,10 @@ const db = require('../models');
 
 module.exports = {
     create: function(req, res){
-        var username = req.body.username;
+        var username = req.body.userName;
         var email = req.body.email;
         var password = req.body.password;
-        var location = req.body.location;
+        var zipCode = req.body.zipCode;
 
         //check for duplicate users
         db.User.find({email: email}, function(err, found){
@@ -13,12 +13,13 @@ module.exports = {
                 console.log("Found!", found[0].email);
                 return res.json({message:"Already Exists"})
             }else{
-                res.json({message:"Does Not Exist"});
-                    let newUser = new db.User({
+                // res.json({message:"Does Not Exist...Creatinggggg"});
+
+                let newUser = new db.User({
                     userName: username,
                     email: email,
                     password: password,
-                    location: location          
+                    zipCode: zipCode          
                 })  
 
                 db.User.hashPass(newUser, function(err, user){

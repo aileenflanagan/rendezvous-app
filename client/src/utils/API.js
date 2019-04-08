@@ -26,9 +26,8 @@ export default {
 	},
 
 	createNewUser: function(newUserObj){
-		return axios.post("/api/users/register",{
-			//newUserObj key: value pairs
-		});
+		console.log("NewUser",newUserObj);
+		return axios.post("/api/users/register", newUserObj);
 	},
 
 };
