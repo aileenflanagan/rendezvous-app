@@ -7,6 +7,11 @@ export default {
 		// console.log("id:", id);
 		return axios.get("/api/groups/" + id);
 	},
+
+	findByUserId: function(id){
+		console.log(" UserId: ", id);
+		return axios.get("/api/users/"+ id);
+	},
 	
 	findByKeywords: function (keyword) {
 		// console.log("On: API.js");
@@ -24,5 +29,11 @@ export default {
 		// console.log("NewUser",newUserObj);
 		return axios.post("/api/users/register", newUserObj);
 	},
+
+
+	findCommentsInGroup: function(id) {
+		console.log("the group's id: ", id);
+		return axios.get("/api/comments/" + id)
+	}
 
 };
