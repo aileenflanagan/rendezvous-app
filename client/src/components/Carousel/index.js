@@ -16,21 +16,21 @@ function Carousel() {
 						</ol>
 						<div className="carousel-inner">
 							<div className="carousel-item active">
-								<img class="car" src="images/people-working.jpg" className="d-block w-100" alt="..." />
+								<img src="images/people-working.jpg" id="car" className="d-block w-100" alt="..." />
 								<div className="carousel-caption d-none d-md-block">
 									<h5 className="darker2">Writers Group</h5>
-									<p className="darker">"Looking for new members! Join us, we're fun!"</p>
+									<p className="darker">"Looking for new members! Magic Fingers!"</p>
 								</div>
 							</div>
 							<div className="carousel-item">
-								<img class="car" src="images/awesome_720.jpg" className="d-block w-100" alt="..." />
+								<img src="images/awesome_720.jpg" id="car"className="d-block w-100" alt="..." />
 								<div className="carousel-caption d-none d-md-block">
 									<h5 className="darker2">Photography Group</h5>
 									<p className="darker">"Click goes the camera!"</p>
 								</div>
 							</div>
 							<div className="carousel-item">
-								<img class="car" src="images/people-exercising.jpg" className="d-block w-100" alt="..." />
+								<img src="images/people-exercising.jpg" id="car" className="d-block w-100" alt="..." />
 								<div className="carousel-caption d-none d-md-block">
 									<h5 className="darker2">Hardcore Workout Group</h5>
 									<p className="darker">"Pain is weakness leaving the body!"</p>
