@@ -1,6 +1,5 @@
 
 use rendezvousdb
-
 db.user.find().pretty()
 
 
@@ -12,19 +11,28 @@ db.user.insertOne({
 		"groupId": "001",
 		"admin": "Yes"})
                 
-use rendezvousdb              
+
+
+            
 db.groups.insertOne({
-		"groupName":"Group Doe",   
-		"adminId": "jdoe",                              
-		"private": "true",
-                "meeting": {"name": "Test Meeting Name",
-                            "Time": "04:20 PM",
-                            "location": {"state": "MN", 
-                                        "city": "Minneapolis", 
-                                        "address": "99 Address1",
-                                        "zip": "55101"},
-                              },
-			})
+                "groupName": "Group7", 
+                "adminID": "admin7", 
+                "private": "false", 
+                
+                "meeting": {
+                        "name": "Meeting Name 7",
+                        "time": "11:00am",
+                        "date": "May 1st", 
+
+                        "location": {
+                                "state": "IL", 
+                                "city": "Fantasy Island", 
+                                "address": "99 Test Adress 7", 
+                                "zip": "12345"
+                                }
+                            }
+                    })
+                    
 
 db.comment.insertOne({
                 "userId": " ", 
