@@ -34,7 +34,7 @@ class CreateAccount extends Component {
 				<div className="col-md-5"></div>
 				<div className="col-md-2">
 					<div className="headers">First Name:</div>
-					<input type="text" id="first-name"></input>
+					<input value={this.state.firstName} onChange={this.handleInputChange} type="text" id="first-name"></input>
 
 					<div className="headers">Last Name:</div>
 					<input type="text" id="last-name"></input>
@@ -48,11 +48,15 @@ class CreateAccount extends Component {
 					<div className="headers">Password:</div>
 					<input type="password" id="password"></input>
 
-					<button className="btn btn-dark btn-sm" id="signup-btn">Sign Up</button>
+					<button className="btn btn-dark btn-sm"
+						id="signup-btn"
+						onClick={this.props.signup}
+					>Sign Up</button>
 
 				</div>
-			</div>
-		</div>);
+
+				</div>
+			</div>);
 
 	}
 
