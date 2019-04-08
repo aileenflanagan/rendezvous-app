@@ -12,26 +12,15 @@ const userSchema = new Schema({
     
 });
 
-const User = mongoose.model("User ", userSchema);
+const User = mongoose.model("User", userSchema);
 
-User.createUser = function(newUser, callback){
+User.hashPass = function(newUser, callback){
     bcrypt.genSalt(10, function(err, salt) {
         bcrypt.hash(newUser.password, salt, null, function(err, hash) {
             newUser.password = hash;
-            // newUser.save(callback)
             callback(err, newUser)
         });
     });
 }
-
-//called when checking password
-User.comparePassword = function(passwordTry, hash, callback){
-    bcrypt.compare(passwordTry, hash, function(err, res) {
-        if(err) throw err;
-        callback(null, isMatch)
-    });
-}
-
-
 
 module.exports = User;

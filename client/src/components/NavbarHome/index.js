@@ -9,13 +9,13 @@ function NavbarHome() {
 
 			<div className="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul className="navbar-nav mr-auto">
-					<li className="nav-item active">
+					{/* <li className="nav-item active"> */}
 						{/* <a className="nav-link" id ="logo" href="/">Rendezvous <span className="sr-only">(current)</span></a> */}
-					</li>
+					{/* </li> */}
 					
 					<li className="nav-item dropdown">
 						<a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Dropdown
+							Rendezvous
         				</a>
 						<div className="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a className="dropdown-item" href="#">Group 1</a>
@@ -27,8 +27,8 @@ function NavbarHome() {
 					</li>
 
 				</ul>
-				<div id="button-div">
-					<button className="btn btn-Light home-buttons" id="login-btn">Login</button>
+				<div  id="button-div">
+					<a className="btn btn-Light home-buttons" id="login-btn" href="/login">Log in</a>
 					<a className="btn btn-Light home-buttons" id="create-acct-btn" href="/signup">Create account</a>
 				</div>
 			</div>
