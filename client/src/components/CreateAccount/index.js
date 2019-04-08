@@ -55,7 +55,8 @@ class CreateAccount extends Component {
 			</div>
 
 
-			<div className="row" id="input-row">
+
+			<div className="row" id="input-row2">
 				<div className="col-md-5"></div>
 				<div className="col-md-2">
 					<div className="headers">First Name:</div>
