@@ -7,6 +7,9 @@ var commentsSchema = new Schema({
         type: String, 
         required: true },
 
+    groupId: {
+        type: String},
+
     description: { 
         type: String, 
         required: true},
