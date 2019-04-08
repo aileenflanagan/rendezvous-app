@@ -3,7 +3,7 @@ use rendezvousdb
 db.user.find().pretty()
 
 
-db.user.insertOne({
+db.users.insertOne({
 		"userName": "jdoe", 
 		"email": "jdoe@email.com",
 		"password": "password1",
@@ -34,8 +34,9 @@ db.groups.insertOne({
                     })
                     
 
-db.comment.insertOne({
+db.comments.insertOne({
                 "userId": " ", 
+                "groupId": " ",
                 "description": " ", 
                 "date": "",
                 "like": " " })
