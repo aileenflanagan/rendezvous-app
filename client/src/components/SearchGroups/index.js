@@ -28,16 +28,9 @@ class Search extends Component {
 	}
 
 
-	findById = id => {
-		console.log("The clicked button's id is:", id);
-		API.findById(id)
-			.then(response => {
-				console.log("response123:", response.data);
-				// NEXT STEP: BRING RESPONSE.DATA INTO THE GROUP PAGE
-				this.setState({ findById: response.data});
-				// console.log("this.state.findById: ", this.state.findById);
-			})
-	}
+	// findById = id => {
+	// 	console.log("The clicked button's id is:", id);
+	// }
 
 
 	render() {
@@ -64,7 +57,7 @@ class Search extends Component {
 
 					<GroupCard
 						groups={this.state.groups}
-						findById={this.findById}
+						// findById={this.findById}
 					/>
 
 				</div>

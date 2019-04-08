@@ -1,4 +1,5 @@
 import React from "react";
+import {  Link } from "react-router-dom";
 import "./style.css";
 
 function GroupCard(props) {
@@ -11,11 +12,12 @@ function GroupCard(props) {
 					<h4 className="group-names">{group.groupName}</h4>
 
 					{/* <a href="/group"> */}
-					<button
+					<Link
 						id={group._id}
-						onClick={() => props.findById(group._id)}
+						// onClick={() => props.findById(group._id)}
+						to={"/group/" + group._id}
 					>View this group
-					</button>
+					</Link>
 					{/* </a> */}
 				</div>
 			))}
