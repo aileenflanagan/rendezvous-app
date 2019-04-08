@@ -23,12 +23,4 @@ User.hashPass = function(newUser, callback){
     });
 }
 
-//called when checking password
-User.comparePassword = function(passwordTry, hash, callback){
-    bcrypt.compare(passwordTry, hash, function(err, res) {
-        if(err) throw err;
-        callback(null, isMatch)
-    });
-}
-
 module.exports = User;

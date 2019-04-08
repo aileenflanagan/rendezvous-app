@@ -17,7 +17,12 @@ class Group extends Component {
 
 
 componentDidMount = (props) => {
-	console.log("props:", props); //undefined
+	console.log(props);
+
+
+
+
+	
 }
 
 
@@ -33,8 +38,6 @@ componentDidMount = (props) => {
 			<div className="row" id="main-row">
 				<div className="col-md-1"></div>
 				<div className="col-md-4 info-div">
-					groupName
-				{/* name={"[get name from db]"} */}
 					<GroupInfo />
 				</div>
 				<div className="col-md-2"></div>
