@@ -30,4 +30,10 @@ export default {
 		return axios.post("/api/users/register", newUserObj);
 	},
 
+
+	findCommentsInGroup: function(id) {
+		console.log("the group's id: ", id);
+		return axios.get("/api/comments/" + id)
+	}
+
 };
