@@ -52,9 +52,9 @@ class Logins extends React.Component {
 
 						<div className="headers">Password:</div>
 						<input type="password" id="password" name="password" onChange={this.handleInputChange}></input>	
-
+						<div>
 						<button className="btn btn-dark btn-sm" id="signup-btn" onClick={this.loginSubmit}>Log in</button>			
-
+						</div>
 					</div>
 
 				</div>
