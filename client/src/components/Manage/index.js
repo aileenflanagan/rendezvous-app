@@ -99,9 +99,9 @@ class ManageGroups extends Component {
 				<div className="col-md-3" id="profile-pic-div">
 					<img src={this.state.image} alt="boohoo" style={{ width: "100px", height: "100px" }} className="img-responsive" />
 					<input type="file" id="upload" accept="image/*" onChange={this.fileSelectedHandler} />
-
+					<div id="poop">
 					<button onClick={this.uploadHandler}>Upload!</button>
-
+					</div>
 				</div>
 				<div className="col-md-1"></div>
 

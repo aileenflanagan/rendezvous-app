@@ -1,21 +1,30 @@
 #profile-pic-div, #settings-div, #joined-groups-div, #created-groups-div, #user-info-div{
 	background-color: rgb(87, 207, 197);
 	box-shadow: inset 0px 0px 8px 2px black;
+	
+}
+#profile-pic-div{
+	padding-top: 1rem;
+}
+#poop{
+	padding-top:1rem;
 }
 
 #edit-btn-div{
 	background-color: rgb(87, 207, 197);
 	box-shadow: inset 0px 0px 8px 2px black;
+	padding-top: 1rem;
 }
 
 #personal-info-tag{
 	margin: 1rem;
 }
 
-#edit-btn{
+/* #edit-btn{
 	float: right;
 	margin: 0.5rem;
-}
+	
+}  */
 
 #edit-row{
 	margin-top: 0;
