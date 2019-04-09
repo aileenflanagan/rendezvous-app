@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const groupController = require("../../controllers/groupController");
-
+const passport = require('passport');
 
 // Matches with "/api/groups"
 router.route("/")
