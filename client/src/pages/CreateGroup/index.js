@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NavbarGroup from '../../components/NavbarGroup';
+import NavbarSignup from '../../components/NavbarSignup';
 import API from '../../utils/API';
 
 class CreateGroup extends Component {
@@ -41,7 +41,7 @@ class CreateGroup extends Component {
     render() {
         return (
             <>
-                <NavbarGroup />
+                <NavbarSignup />
                 <div className="container">
                     <h3>Create A New Group</h3>
                     <form>

@@ -1,21 +1,38 @@
 import React from "react";
 import "./style.css";
+import API from "../../utils/API";
 
 class NavbarHome extends React.Component {
 	state = {
-		userLogged: false
+		
 	}
 
 	componentDidMount(){
 		let logCheck = sessionStorage.logged;
+		let logInBut = document.getElementById('login-btn');
+		let logOutBut = document.getElementById('logout-btn');
+		let signUpBut = document.getElementById('create-acct-btn');
+		let groupBut = document.getElementById('group-btn');
 
 		if(logCheck){
-			this.state.userLogged = true;
+			logInBut.style.display = "none";
+			signUpBut.style.display = "none";
 		}else{
+			logOutBut.style.display = "none";
+			groupBut.style.display = "none";
 			console.log("not logged");
 		}
-	}
+	}	
 	
+	userLogOut = () => {
+		sessionStorage.removeItem("userDBId");
+		sessionStorage.removeItem("logged");
+
+		API.userLogout().then(() => {
+			window.location.href = "/";
+		});
+	}
+
 	render() {
 		return (
 			<nav className="navbar sticky-top navbar-expand-lg navbar-light bg-light">
@@ -43,8 +60,9 @@ class NavbarHome extends React.Component {
 
 					</ul>
 					<div   id="button-div">
-						<a className="btn btn-Light home-buttons" id="create-btn" href="/creategroup">Create Group</a>
+						<a className="btn btn-Light home-buttons" id="group-btn" href="/creategroup">Manage Group</a>
 						<a className="btn btn-Light home-buttons" id="login-btn" href="/login">Log in</a>
+						<a className="btn btn-Light home-buttons" id="logout-btn" href="/" onClick={this.userLogOut}>Log Out</a>
 						<a className="btn btn-Light home-buttons" id="create-acct-btn" href="/signup">Create account</a>
 					</div>
 				</div>
