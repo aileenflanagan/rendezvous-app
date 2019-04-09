@@ -13,6 +13,10 @@ let changingBtnTxt = "Edit";
 // import user data from db
 // import group data from db
 
+let groupArr;
+let foundGroupInfo=[];
+let user=sessionStorage.userDBId;
+
 
 function clickHandler() {
 	console.log("Event for editing goes here", editing);
@@ -37,11 +41,11 @@ class ManageGroups extends Component {
 	}
 
 	componentDidMount = () => {
-		this.loadInfo();
+		this.loadInfo(user);
 	}
 
 	loadInfo = (id) => {
-		API.findByUserId("5cabdd3d6c6b343d08ef3610")
+		API.findByUserId(id)
 			.then(res => {
 				console.log("res.data ", res.data);
 				this.setState({
@@ -55,8 +59,27 @@ class ManageGroups extends Component {
 				})
 				console.log(this.state);
 			})
-			.then(
-
+			.then(res=>{
+				groupArr=this.state.groupId;			
+				groupArr.map((i)=>{
+					console.log(i);
+					API.findById(i)
+					.then(res=>{
+						// console.log("resdata", res.data);
+						// this.setState({groups: "something"});
+						console.log("this.state.groups",this.state.groups);
+						foundGroupInfo.push(res.data);
+						console.log("foundgroups: ",foundGroupInfo);
+						this.setState({groups: "something"})					
+					})
+					// .then(res=>{
+					// 	foundGroupInfo.map((i)=>{
+					// 		console.log("mapping foundGroupInfo", i);
+					// 	})
+					// })
+				})
+			}
+				
 			)
 			.catch(err => console.log(err));
 	}
@@ -116,10 +139,10 @@ class ManageGroups extends Component {
 								password="******"
 							/>
 						</div>
-						<div className="col-md-2" id="edit-btn-div">
+						{/* <div className="col-md-2" id="edit-btn-div">
 							{editing ? <button onClick={clickHandler}>Save</button> : <button onClick={clickHandler}>edit</button>}
-							{/* <button onClick={clickHandler} className="btn btn-primary" id="edit-btn">{editing? "Save": "Edit"}</button> */}
-						</div>
+							
+						</div> */}
 					</div>
 				</div>
 			</div>
@@ -129,10 +152,13 @@ class ManageGroups extends Component {
 				<div className="col-md-1"></div>
 				<div className="col-md-10" id="joined-groups-div">
 
-					<div>[group card component goes here: group image, group name]</div>	{/* temporary */}
-					<p>{this.state.groups}groups</p>
+					<div></div>	{/* temporary */}
+					<h3>Groups</h3>
+					{/* <p>{foundGroupInfo}</p>
+					{foundGroupInfo? groups=foundGroupInfo:""} */}
 					<GroupCard
-						groups={this.state.groups}
+						groups={foundGroupInfo}
+						
 
 
 					/>
@@ -152,18 +178,16 @@ class ManageGroups extends Component {
 			</div>
 
 			{/* Created Groups */}
-			<div className="row">
+			{/* <div className="row">
 				<div className="col-md-1"></div>
 				<div className="col-md-10" id="created-groups-div">
-					<div>[group card component goes here: group image, group name, reassign btn, delete btn]</div>	{/* temporary */}
-					{/* <GroupCard
-					groupName={"props.groupName"}
-				/> */}
+					<div>[group card component goes here: group image, group name, reassign btn, delete btn]</div>	
+					
 
 
 				</div>
 				<div className="col-md-1"></div>
-			</div>
+			</div> */}
 		</div>);
 	}
 }

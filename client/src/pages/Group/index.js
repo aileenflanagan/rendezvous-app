@@ -68,6 +68,20 @@ class Group extends Component {
 		// 		console.log("chazz princeton: ", response);
 
 		// 	})
+		API.joinGroup(this.state.searchedGroup, user)
+			.then(response=>{
+				console.log(response);
+				
+			})
+			.then(response=>{
+				console.log("doing API.joinGroupUser(",this.state.searchedGroup,", ", user,")");
+				API.joinGroupUser(this.state.searchedGroup, user)
+					.then(response=>{
+						console.log(response);
+						// alert("You have joined this group!");
+					})
+			})
+			.catch(err=>console.log(err));
 	}
 
 
