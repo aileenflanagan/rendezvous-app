@@ -25,6 +25,10 @@ export default {
 		return axios.post("/api/users/login", loginObj);
 	},
 
+	userLogout: function(){
+		return axios.get("/api/users/logout")
+	},
+
 	createNewUser: function(newUserObj){
 		// console.log("NewUser",newUserObj);
 		return axios.post("/api/users/register", newUserObj);
