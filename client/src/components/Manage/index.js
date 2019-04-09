@@ -41,7 +41,7 @@ class ManageGroups extends Component {
 	}
 
 	loadInfo = (id) => {
-		API.findByUserId("5cabdd3d6c6b343d08ef3610")
+		API.findByUserId("5cab6b77ed48d201f9869789")
 			.then(res => {
 				console.log("res.data ", res.data);
 				this.setState({
@@ -79,7 +79,7 @@ class ManageGroups extends Component {
 			}
 		}).then(function (data) {
 			console.log("pic we got back", data.data[0].secure_url)
-			API.updateByUserId("5cabdd3d6c6b343d08ef3610", data.data[0].secure_url)
+			API.updateByUserId("5cab6b77ed48d201f9869789", data.data[0].secure_url)
 				.then(function (data) {
 					console.log("data we got back", data)
 				})
@@ -99,9 +99,15 @@ class ManageGroups extends Component {
 				<div className="col-md-3" id="profile-pic-div">
 					<img src={this.state.image} alt="boohoo" style={{ width: "100px", height: "100px" }} className="img-responsive" />
 					<input type="file" id="upload" accept="image/*" onChange={this.fileSelectedHandler} />
+<<<<<<< HEAD
 					<div id="poop">
 					<button onClick={this.uploadHandler}>Upload!</button>
 					</div>
+=======
+
+					{/* <button onClick={this.uploadHandler}>Upload!</button> */}
+
+>>>>>>> 7c4612603f49dfcb5afbd7b480f6ffc0be45f655
 				</div>
 				<div className="col-md-1"></div>
 

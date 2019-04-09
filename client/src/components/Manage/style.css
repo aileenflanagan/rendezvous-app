@@ -2,18 +2,25 @@
 	background-color: rgb(87, 207, 197);
 	box-shadow: inset 0px 0px 8px 2px black;
 	
+<<<<<<< HEAD
 }
 #profile-pic-div{
 	padding-top: 1rem;
 }
 #poop{
 	padding-top:1rem;
+=======
+>>>>>>> 7c4612603f49dfcb5afbd7b480f6ffc0be45f655
 }
 
 #edit-btn-div{
 	background-color: rgb(87, 207, 197);
 	box-shadow: inset 0px 0px 8px 2px black;
+<<<<<<< HEAD
 	padding-top: 1rem;
+=======
+	
+>>>>>>> 7c4612603f49dfcb5afbd7b480f6ffc0be45f655
 }
 
 #personal-info-tag{
@@ -33,4 +40,8 @@
 #main-manage-div{
 	background-color: rgb(43, 68, 138);
 	padding-bottom: 2rem;
+}
+
+.top {
+	margin-top: 5rem;
 }
