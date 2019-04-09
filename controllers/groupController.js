@@ -23,6 +23,13 @@ module.exports = {
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
+
+    joinGroup: function(req, res){
+        db.Groups
+            .findOneAndUpdate({_id: req.params.groupId}, {$push: {groupMembers: req.params.userId}})
+            .then(dbModel=> res.json(dbModel))
+            .catch(err => res.status(422).json(err));
+    },
     
     remove: function (req, res) {
         db.Groups.findById(req.params.id)
