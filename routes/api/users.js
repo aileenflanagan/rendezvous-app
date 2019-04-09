@@ -8,13 +8,17 @@ cloudinary.config({
   cloud_name: "dqadqluxx", 
   api_key: "618381916967669", 
   api_secret: "1bomeODECnYIR817uCouYk1SqPM"
-});
+})
 
 const passport = require('passport');
 
 //login route /api/users/login
 router.route("/login")  
-  .post((req, res) => passport.authenticate('local', { successRedirect: '/', failureRedirect: '/fail'})(req, res));
+  .post((req, res, next) => {next()}, passport.authenticate('local'), 
+  (request,response)=>{
+      console.log(request.user);
+      response.json(request.user._id);
+    });
 
 //logout
 router.route('/logout')
@@ -34,7 +38,7 @@ router.route("/userSave").post(function(req, res) {
   
   Promise
     .all(promises)
-    .then(results => res.json(results))
+    .then(results => console.log('these are our results!!!', results))
   // console.log("heres our pics", values)
 })
 

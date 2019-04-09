@@ -1,33 +1,42 @@
 import React, { Component } from 'react';
 import NavbarGroup from '../../components/NavbarGroup';
+import API from '../../utils/API';
 
 class CreateGroup extends Component {
     state = {
-
-        // get info from database and set state
-
+        groupName: "",
+        groupLocation: "",
+        groupDescription: "",
+        groupMeeting: "",
+        privacySetting: ""
     };
-
-    // const newGroup = {
-    //     name:name,
-    //     //any other info sending to schema
-    //   };
-
-    //API Call for creating new group
 
     handleInputChange = event => {
-        this.setState({ something: event.target.value })
-    };
+		const { name, value } = event.target;
+		this.setState({
+			[name]: value
+		});
+	};
 
-    handleFormSubmit = event => {
-        event.preventDefault();
-        console.log(`Search for: ${this.state.search}`);
-        // API.newGroup(this.state.search)
-        //   .then(res => {
+    newGroup = () => {
+        let pSetting = false;
 
-        //   })
-        //   .catch(err => console.log(err))
-    };
+        if(this.state.privacySetting === "private"){
+            pSetting = true;
+        }
+
+        let newGroup = {
+            groupName: this.state.groupName,
+            description: this.state.groupDescription,
+            location: this.state.groupLocation,
+            meeting: this.state.groupMeeting,
+            private: pSetting
+        }
+
+        API.createNewGroup(newGroup).then(response => {
+            
+        })
+    }
 
     render() {
         return (
@@ -38,32 +47,32 @@ class CreateGroup extends Component {
                     <form>
                         <div className="form-group">
                             <label for="grp-name-input">Group Name</label>
-                            <input type="text" className="form-control" id="grp-name-input" placeholder=""></input>
+                            <input type="text" className="form-control" id="grp-name-input" placeholder="" name="groupName" onChange={this.handleInputChange}></input>
                         </div>
                         <div className="form-group">
                             <label for="grp-location-input">General Location</label>
-                            <input type="text" className="form-control" id="grp-location-input" placeholder="City, State"></input>
+                            <input type="text" className="form-control" id="grp-location-input" placeholder="City, State" name="groupLocation" onChange={this.handleInputChange}></input>
                         </div>
                         <div className="form-group">
                             <label for="grp-mtg-input">Recurring Meeting (Optional) </label>
-                            <input type="text" className="form-control" id="grp-mtg-input" placeholder="ex: Every Friday 4-6pm"></input>
+                            <input type="text" className="form-control" id="grp-mtg-input" placeholder="ex: Every Friday 4-6pm" name="groupMeeting" onChange={this.handleInputChange}></input>
                         </div>
                         <div className="form-group">
                             <label for="description-input">Group Description</label>
-                            <textarea className="form-control" id="description-input" rows="3"></textarea>
+                            <textarea className="form-control" id="description-input" rows="3" name="groupDescription" onChange={this.handleInputChange}></textarea>
                         </div>
                         <div id="radios">
                             <label for="radios">Privacy Settings</label>
                             <div className="form-check">
-                                <input className="form-check-input" type="radio" name="exampleRadios" id="private-radio" value="option1" checked></input>
+                                <input className="form-check-input" type="radio" name="privacySetting" id="private-radio" value="private" onChange={this.handleInputChange}></input>
                                 <label className="form-check-label" for="private-radio">
                                     Public- anyone can join this group
                             </label>
                             </div>
                             <div className="form-check">
-                                <input className="form-check-input" type="radio" name="exampleRadios" id="public-radio" value="option2"></input>
+                                <input className="form-check-input" type="radio" name="privacySetting" id="public-radio" value="public" onChange={this.handleInputChange}></input>
                                 <label className="form-check-label" for="public-radio">
-                                    Private- members request to join and must be approved by the admin
+                                    Private- members must request to join 
                         </label>
                             </div>
                         </div>
@@ -81,7 +90,7 @@ class CreateGroup extends Component {
                         </div>
                     </div>
                     <hr></hr>
-                    <button className="btn btn-success">Create</button>
+                    <button className="btn btn-success" onClick={this.newGroup}>Create</button>
                     </form>
 
 
