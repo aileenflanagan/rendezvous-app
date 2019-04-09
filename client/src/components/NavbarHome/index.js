@@ -54,9 +54,9 @@ class NavbarHome extends React.Component {
 						<a className="btn btn-Light home-buttons" id="create-acct-btn" href="/signup">Create account</a>
 					</div>
 				</div>
-			
-		</nav>
-	)
-};
+			</nav>
+		);
+	}
+}
 
 export default NavbarHome;
