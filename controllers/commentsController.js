@@ -3,6 +3,7 @@ const db = require("../models");
 module.exports = {
 
     create: function(req, res) {
+        console.log("group controller",req.body)
         db.Comments
             .create(req.body)
             .then(dbModel => res.json(dbModel))

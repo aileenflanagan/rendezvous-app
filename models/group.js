@@ -6,23 +6,16 @@ var groupsSchema = new Schema({
     groupName:{type: String, 
               required: true,
               unique: true},
-
-    adminID: {type: String},            
     
-    meeting: {
-              name: {type: String},                            
-              time: {type: String},
-              date: {type: String},
+    description: {type: String},
 
-              location: {
-                        state: {type: String}, 
-                        city: {type: String},
-                        address: {type: String},
-                        zip: {type: String}
-                        }            
-              },   
-                
+    location: {type: String},              
+    
+    meeting: {type: String},
+    
     private: {type: Boolean},
+
+    adminID: {type: String},  
     
     userCreated: {type: Date, default: Date.now}
     
