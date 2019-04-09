@@ -13,6 +13,7 @@ class NavbarHome extends React.Component {
 		let logOutBut = document.getElementById('logout-btn');
 		let signUpBut = document.getElementById('create-acct-btn');
 		let groupBut = document.getElementById('group-btn');
+		let createGroupBut = document.getElementById('create-group-btn');
 
 		if(logCheck){
 			logInBut.style.display = "none";
@@ -20,7 +21,7 @@ class NavbarHome extends React.Component {
 		}else{
 			logOutBut.style.display = "none";
 			groupBut.style.display = "none";
-			console.log("not logged");
+			createGroupBut.style.display = "none";
 		}
 	}	
 	
@@ -49,6 +50,7 @@ class NavbarHome extends React.Component {
 					</ul>
 					<div   id="button-div">
 						<a className="btn btn-Light home-buttons" id="group-btn" href="/manage">Manage Group</a>
+						<a className="btn btn-Light home-buttons" id="create-group-btn" href="/creategroup">Create Group</a>
 						<a className="btn btn-Light home-buttons" id="login-btn" href="/login">Log in</a>
 						<a className="btn btn-Light home-buttons" id="logout-btn" href="/" onClick={this.userLogOut}>Log Out</a>
 						<a className="btn btn-Light home-buttons" id="create-acct-btn" href="/signup">Create account</a>
