@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "./style.css";
-import NavbarGroup from "../../components/NavbarGroup";
 import CommentCard from "../../components/CommentCard";
 import MemberCard from "../../components/MemberCard";
 import API from "../../utils/API";
+import NavbarHome from "../../components/NavbarHome";
 
 
 class Group extends Component {
@@ -60,7 +60,7 @@ class Group extends Component {
 
 	render() {
 		return (<>
-			<NavbarGroup />
+			<NavbarHome />
 
 
 			<div className="row" id="main-row">
