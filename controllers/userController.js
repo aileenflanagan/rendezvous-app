@@ -55,14 +55,14 @@ module.exports = {
                 res.status(422).json(err)
             });
     },
-    
-    // join button route attempt
-    //......................................
-    // findByUserIdAndUpdateGroupArray: function (req, res) {
-    //     console.log("boop: ", req.params.id);
-    //     // db.User
-    //         // .findOneAndUpdate({ _id:})
-    // },
+
+    joinGroupUser: function(req, res){
+        // console.log("joining group user in controller\ngroupId: ", req.params.groupId, "\nuserId: ", req.params.userId);
+        db.User
+            .findOneAndUpdate({_id: req.params.userId}, {$push: {groupId: req.params.groupId}})
+            .then(dbModel=> res.json(dbModel))
+            .catch(err => res.status(422).json(err));
+    },
 
     //.....................................
     update: function (req, res) {

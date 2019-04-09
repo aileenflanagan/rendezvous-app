@@ -53,11 +53,8 @@ router.route("/:id")
   .put(userController.update)
   .delete(userController.remove)
 
-
-// join button route attempt
-// Matches with "/api/users/join/:id"
-// router.route("/join/:id")
-//   .put(userController.findByUserIdAndUpdateGroupArray)
+router.route("/join/:userId/:groupId")
+  .put(userController.joinGroupUser);
 
 
 module.exports = router;
