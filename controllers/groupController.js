@@ -23,6 +23,7 @@ module.exports = {
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
+    
     remove: function (req, res) {
         db.Groups.findById(req.params.id)
             .then(dbGroups => dbGroups.remove())

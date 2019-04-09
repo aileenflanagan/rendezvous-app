@@ -3,6 +3,8 @@
 	background-color: rgb(138, 138, 138);
 }
 
-#main-row{
-	/* margin-top: 0; */
+.pretty-div{
+	background-color: rgb(98, 150, 233);
+	padding: 1rem;
+	margin: 1rem;
 }
