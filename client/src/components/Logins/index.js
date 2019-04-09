@@ -3,9 +3,9 @@ import API from "../../utils/API";
 import "./style.css";
 
 class Logins extends React.Component {
-	state={
+	state = {
 		email: '',
-		password: ''		
+		password: ''
 	}
 
 	handleInputChange = event => {
@@ -32,34 +32,35 @@ class Logins extends React.Component {
 		});
 	}
 
-	render(){
+	render() {
 		return (
 			<div id="container">
-			<div id="color" className="row">
+				<div id="color" className="row">
 					<div className="col-md-2"></div>
 					<div className="col-md-8" id="title-div">
 						Log in
-						
-						</div>
-					</div>		
+					</div>
+				</div>
 
-				<div className="row" id="input-row">
+				<div className="row">
 					<div className="col-md-5"></div>
 					<div className="col-md-2">
-					
+
 						<div className="headers">Email:</div>
 						<input type="email" id="email" name="email" onChange={this.handleInputChange}></input>
 
 						<div className="headers">Password:</div>
-						<input type="password" id="password" name="password" onChange={this.handleInputChange}></input>	
+						<input type="password" id="password" name="password" onChange={this.handleInputChange}></input>
 						<div>
-						<button className="btn btn-dark btn-sm" id="signup-btn" onClick={this.loginSubmit}>Log in</button>			
+							<button className="btn btn-dark btn-sm" id="signup-btn" onClick={this.loginSubmit}>Log in</button>
 						</div>
 					</div>
-
 				</div>
+
+				<div className="row" id="input-row"></div>
+
 			</div>);
-		}
+	}
 }
 
 

@@ -5,7 +5,6 @@ import MemberCard from "../../components/MemberCard";
 import API from "../../utils/API";
 import NavbarHome from "../../components/NavbarHome";
 
-
 class Group extends Component {
 	state = {
 		searchedGroup: "",
@@ -32,7 +31,6 @@ class Group extends Component {
 			})
 
 		// API call to get the comments from the particular group
-
 		API.findCommentsInGroup(this.props.match.params.id)
 			.then(response => {
 
@@ -47,33 +45,35 @@ class Group extends Component {
 
 		// API call to get the user's userName from their userId
 		// API.findByUserId(this.state.comments)
-
 	}
 
 
 	joinGroupClickHandler = () => {
-		console.log("this.state.searchedGroup: ", this.state.searchedGroup);
+		console.log("current group's _id: ", this.state.searchedGroup);
+		let user = sessionStorage.userDBId;
+		console.log("currently-logged-in userId: ", user);
+		// [x] step 1: find the user's userId
+		// [x] step 2: find the group's _id (this.state.searchedGroup)
 
-		// step 1: find the user's userId
-		// step 2: find the group's _id (this.state.searchedGroup)
 		// step 3: api call to append the groupId to the user's groupId array
 		// maybe this would work 
 		/*
 			var query = { name: 'borne' };
 			Model.findOneAndUpdate(query, { name: 'jason bourne' }, options, callback)
 		*/
-		// API.findById()
+
+		// join button route attempt
+		// API.findByUserIdAndUpdateGroupArray(user)
+		// 	.then(response => {
+		// 		console.log("chazz princeton: ", response);
+
+		// 	})
 	}
 
 
-
-
-
-
 	render() {
-		return (<>
+		return (<div id="main-group-container">
 			<NavbarHome />
-
 
 			<div className="row" id="main-row">
 				<div className="col-md-1"></div>
@@ -105,7 +105,7 @@ class Group extends Component {
 			{/* Discussion Board */}
 			<div className="row">
 				<div className="col-md-1"></div>
-				<div className="col-md-10 info-div">
+				<div className="col-md-10 info-div" id="comment-container">
 					<CommentCard
 						comments={this.state.comments}
 					/>
@@ -122,7 +122,7 @@ class Group extends Component {
 				<div className="col-md-1"></div>
 			</div>
 
-		</>);
+		</div>);
 	}
 }
 

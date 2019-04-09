@@ -6,22 +6,21 @@
 	margin-right: auto; */
 }
 
-
-
 #signup-btn{
 	margin: auto;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 }
 
-#color2 {
-	background: rgb(226, 225, 225)
+.headers{
+	color: black !important;
 }
 
 #description-div {
 	font-size: 1em;
 	font-family: 'Times New Roman', Times, serif
 }
+
 p{
 	font-size: 25px;
 }

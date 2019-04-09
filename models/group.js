@@ -9,8 +9,6 @@ var groupsSchema = new Schema({
     
     description: {type: String},
 
-    description: {type: String},
-
     location: {type: String},             
     
     meeting: {type: String},   

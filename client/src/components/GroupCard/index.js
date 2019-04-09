@@ -13,10 +13,10 @@ function GroupCard(props) {;
 					<h4 className="group-names">{group.groupName}</h4>
 
 					{/* Passes the groupId to the group page and renders it */}
-					<Link
+					<Link className="group-card-links"
 						id={group._id}
 						to={"/group/" + group._id}
-					>View this group
+					>Click to view this group
 					</Link>
 					
 				</div>

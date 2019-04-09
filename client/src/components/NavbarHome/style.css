@@ -2,6 +2,11 @@
 	display: inline;
 }
 
+.navbar{
+	background-color: rgb(42, 135, 172) !important;
+	/* background-color: rgb(16, 101, 134) !important; */
+}
+
 .home-buttons{
 	margin-left: 1rem;
 }

@@ -28,17 +28,17 @@ class CreateAccount extends Component {
 		}
 
 		API.createNewUser(newUserObj)
-			.then(response => {	
-				let message = response.data.statusText		
-				if(message === "Exists"){
+			.then(response => {
+				let message = response.data.statusText
+				if (message === "Exists") {
 					//Say email already exists
 					console.log("this exists")
 					alert('Email already exists')
-				}else if(message === "Creating"){
+				} else if (message === "Creating") {
 					window.location.href = "/"
 				}
 			})
-			.catch(err => {console.log(err)});
+			.catch(err => { console.log(err) });
 	}
 
 	render() {
@@ -46,15 +46,12 @@ class CreateAccount extends Component {
 			<div id="color" className="row">
 				<div className="col-md-2"></div>
 				<div className="col-md-8" id="title-div">Your Journey Starts
-				<div id="description-div">
+					<div id="description-div">
 						<p>Are you ready to change your life? Sign up and start doing the things you love!
-
-					</p>
+						</p>
 					</div>
 				</div>
 			</div>
-
-
 
 			<div className="row" id="input-row2">
 				<div className="col-md-5"></div>
@@ -81,8 +78,8 @@ class CreateAccount extends Component {
 
 				</div>
 
-				</div>
-			</div>);
+			</div>
+		</div>);
 
 	}
 
