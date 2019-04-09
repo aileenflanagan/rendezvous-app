@@ -40,22 +40,10 @@ class NavbarHome extends React.Component {
 				{/* <i class="fas fa-users"></i> */}
 
 				<div className="collapse navbar-collapse" id="navbarSupportedContent">
+					<div className="navbar-brand" ><i class="fas fa-users"></i></div>
 					<ul className="navbar-nav mr-auto">
-						{/* <li className="nav-item active"> */}
-							{/* <a className="nav-link" id ="logo" href="/">Rendezvous <span className="sr-only">(current)</span></a> */}
-						{/* </li> */}
-						
-						<li className="nav-item dropdown">
-							<a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Rendezvous
-							</a>
-							<div className="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a className="dropdown-item" href="/group">Group 1</a>
-								<a className="dropdown-item" href="#">Group 2</a>
-								<div className="dropdown-divider"></div>
-								<a className="dropdown-item" href="/manage">Manage my groups</a>
-							</div>
-
+						<li className="nav-item active">
+						<a className="nav-link" id="logo" href="/">Rendezvous <span className="sr-only">(current)</span></a>
 						</li>
 
 					</ul>
