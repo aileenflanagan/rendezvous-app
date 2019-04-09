@@ -48,7 +48,7 @@ class NavbarHome extends React.Component {
 
 					</ul>
 					<div   id="button-div">
-						<a className="btn btn-Light home-buttons" id="group-btn" href="/creategroup">Manage Group</a>
+						<a className="btn btn-Light home-buttons" id="group-btn" href="/manage">Manage Group</a>
 						<a className="btn btn-Light home-buttons" id="login-btn" href="/login">Log in</a>
 						<a className="btn btn-Light home-buttons" id="logout-btn" href="/" onClick={this.userLogOut}>Log Out</a>
 						<a className="btn btn-Light home-buttons" id="create-acct-btn" href="/signup">Create account</a>

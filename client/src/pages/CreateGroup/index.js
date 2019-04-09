@@ -30,7 +30,8 @@ class CreateGroup extends Component {
             description: this.state.groupDescription,
             location: this.state.groupLocation,
             meeting: this.state.groupMeeting,
-            private: pSetting
+            private: pSetting,
+            adminId: sessionStorage.userDBId
         }
 
         API.createNewGroup(newGroup).then(response => {
