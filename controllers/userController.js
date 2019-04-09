@@ -1,4 +1,6 @@
 const db = require('../models');
+// var ObjectId = require('mongoose').Types.ObjectId
+var mongoose = require('mongoose')
 
 module.exports = {
     create: function(req, res){
@@ -17,7 +19,8 @@ module.exports = {
                     userName: username,
                     email: email,
                     password: password,
-                    zipCode: zipCode          
+                    zipCode: zipCode,
+                    image: "test"          
                 })  
 
                 db.User.hashPass(newUser, function(err, user){
@@ -41,17 +44,30 @@ module.exports = {
 
     //......................................
     findById: function(req, res) {
+        console.log("this the id we looking for", req.params.id)
         db.User.findById(req.params.id)    
-          .then(dbUsers => res.json(dbUsers))
-          .catch(err => res.status(422).json(err));
+          .then((dbUsers) => {
+            console.log("this is the user we found", dbUsers)  
+            res.json(dbUsers)} )
+          .catch(( err ) => { 
+            console.log("this is our error", err)  
+            res.status(422).json(err)});
       },
 
     //.....................................
     update: function(req, res) {
+        console.log("this is what we're updating", req.body)
+        console.log("kdljfsdf", req.params.id)
         db.User
-        .findOneAndUpdate({_id: req.params.id}, req.body)
-            .then(dbModel => res.json(dbModel))
-            .catch(err => res.status(422).json(err));
+        .findOneAndUpdate({_id: mongoose.Types.ObjectId(req.params.id)}, {image: req.body.image})
+            .then((dbModel) => { 
+                console.log("updated this", dbModel)
+                res.json(dbModel)})
+            .catch((err) => { 
+                console.log("catch err", err)
+                res.status(422).json(err)
+                
+            });
     },
 
     //.....................................

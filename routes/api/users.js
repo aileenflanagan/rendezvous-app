@@ -8,7 +8,7 @@ cloudinary.config({
   cloud_name: "dqadqluxx", 
   api_key: "618381916967669", 
   api_secret: "1bomeODECnYIR817uCouYk1SqPM"
-})
+});
 
 const passport = require('passport');
 
@@ -34,7 +34,7 @@ router.route("/userSave").post(function(req, res) {
   
   Promise
     .all(promises)
-    .then(results => console.log('these are our results!!!', results))
+    .then(results => res.json(results))
   // console.log("heres our pics", values)
 })
 
