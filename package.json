@@ -14,7 +14,7 @@
     "react-scripts": "^2.1.8"
   },
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   }
 }
