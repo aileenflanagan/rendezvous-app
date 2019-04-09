@@ -23,7 +23,9 @@ class Logins extends React.Component {
 
 		API.userLogin(loginObj).then(response => {
 			console.log("Correct Password", "userID", response.data);
-			// window.location.href = "/"
+			sessionStorage.setItem("userDBId", response.data);
+			sessionStorage.setItem("logged", true);
+			window.location.href = "/"
 		}).catch(err => {
 			console.log("LOGIN ERR0R", err);
 			alert('Password or Email Incorrect')
@@ -50,9 +52,9 @@ class Logins extends React.Component {
 
 						<div className="headers">Password:</div>
 						<input type="password" id="password" name="password" onChange={this.handleInputChange}></input>	
-
+						<div>
 						<button className="btn btn-dark btn-sm" id="signup-btn" onClick={this.loginSubmit}>Log in</button>			
-
+						</div>
 					</div>
 
 				</div>
