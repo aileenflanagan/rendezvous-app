@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./style.css";
 import NavbarGroup from "../../components/NavbarGroup";
 import CommentCard from "../../components/CommentCard";
+import MemberCard from "../../components/MemberCard";
 import API from "../../utils/API";
 
 
@@ -16,14 +17,16 @@ class Group extends Component {
 		locationState: "",
 		locationZip: "",
 		comments: [],
+		members: [],
 	}
 
 	componentDidMount() {
 
 		console.log("this.props.match.params.id: ", this.props.match.params.id);
+
+		// API call to get the group and set the state to the results
 		API.findById(this.props.match.params.id)
 			.then(response => {
-
 				console.log("response123: ", response.data);
 
 				this.setState({ groupName: response.data[0].groupName })
@@ -36,14 +39,22 @@ class Group extends Component {
 				this.setState({ locationZip: response.data[0].meeting.location.zip })
 			})
 
-		//api call to get the comments from the group{
+		// API call to get the comments from the particular group
 
 		API.findCommentsInGroup(this.props.match.params.id)
 			.then(response => {
+
 				console.log("response456: ", response.data);
+
 				this.setState({ comments: response.data })
 
+				console.log("this.state.comments: ", this.state.comments);
+
+
 			})
+
+		// API call to get the user's userName from their userId
+		// API.findByUserId(this.state.comments)
 
 	}
 
@@ -88,7 +99,7 @@ class Group extends Component {
 			<div className="row">
 				<div className="col-md-1"></div>
 				<div className="col-md-10 info-div">
-					[Group Members go here]
+					{/* <MemberCard /> */}
 				</div>
 				<div className="col-md-1"></div>
 			</div>
