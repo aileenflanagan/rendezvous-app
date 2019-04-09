@@ -44,9 +44,9 @@ app.use(passport.session());
 // Add routes, both API and view
 app.use(routes);
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 
 // Start the API server
 app.listen(PORT, function() {
