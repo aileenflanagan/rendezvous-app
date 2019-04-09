@@ -1,3 +1,32 @@
 .pea-tags{
 	margin-top: 1rem;
 }
+
+#main-search-div{
+	background: rgb(43, 68, 138);
+	margin: 0;
+	margin-top: 0;
+	padding: 2rem;
+	box-shadow: inset 0px 0px 8px 2px black;
+}
+
+#search-input-div{
+	background-color: rgb(87, 207, 197);
+	margin: 1rem;
+	padding: 2rem;
+	padding-top: 1rem;
+	box-shadow: 0px 0px 8px 2px black;
+	border-radius: 5px;
+}
+
+.group-search-rows{
+	background-color: rgb(42, 135, 172);
+	margin: 0;
+}
+
+#containing-group-cards{
+	position: relative;
+	min-height: 800px;
+	bottom: 0;
+	/* overflow: scroll; */
+}

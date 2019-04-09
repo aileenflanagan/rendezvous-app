@@ -37,21 +37,22 @@ class NavbarHome extends React.Component {
 		return (
 			<nav className="navbar sticky-top navbar-expand-lg navbar-light bg-light">
 				<div className="navbar-brand"></div>
-				{/* <i class="fas fa-users"></i> */}
+				{/* <i className="fas fa-users"></i> */}
 
 				<div className="collapse navbar-collapse" id="navbarSupportedContent">
-					<div className="navbar-brand" ><i class="fas fa-users"></i></div>
+					<div className="navbar-brand" ><i className="fas fa-users"></i></div>
 					<ul className="navbar-nav mr-auto">
 						<li className="nav-item active">
 						<a className="nav-link" id="logo" href="/">Rendezvous <span className="sr-only">(current)</span></a>
 						</li>
 
 					</ul>
-					<div   id="button-div">
-						<a className="btn btn-Light home-buttons" id="group-btn" href="/manage">Manage Group</a>
-						<a className="btn btn-Light home-buttons" id="login-btn" href="/login">Log in</a>
-						<a className="btn btn-Light home-buttons" id="logout-btn" href="/" onClick={this.userLogOut}>Log Out</a>
-						<a className="btn btn-Light home-buttons" id="create-acct-btn" href="/signup">Create account</a>
+					<a className="btn btn-Light home-buttons" id="search-btn" href="/search"><b>Go to Group Search</b></a>
+					<div id="button-div">
+						<a className="btn btn-Light home-buttons" id="group-btn" href="/manage"><b>Manage Group</b></a>
+						<a className="btn btn-Light home-buttons" id="login-btn" href="/login"><b>Log in</b></a>
+						<a className="btn btn-Light home-buttons" id="logout-btn" href="/" onClick={this.userLogOut}><b>Log Out</b></a>
+						<a className="btn btn-Light home-buttons" id="create-acct-btn" href="/signup"><b>Create account</b></a>
 					</div>
 				</div>
 			</nav>

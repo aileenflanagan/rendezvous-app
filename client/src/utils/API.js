@@ -12,6 +12,12 @@ export default {
 		console.log(" UserId: ", id);
 		return axios.get("/api/users/"+ id);
 	},
+
+	// join button route attempt
+	// findByUserIdAndUpdateGroupArray: function(id){
+	// 	console.log("update group array path; userId:", id);
+	// 	return axios.put("/api/users/join/" + id);
+	// },
 	
 	findByKeywords: function (keyword) {
 		// console.log("On: API.js");

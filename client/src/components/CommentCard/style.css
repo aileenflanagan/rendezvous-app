@@ -2,6 +2,7 @@
 	background-color: rgb(98, 150, 233);
 	margin: 1rem 1rem;
 	padding: 1rem;
+	border: 1px solid black;
 }
 
 #date-created{
