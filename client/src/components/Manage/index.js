@@ -102,7 +102,7 @@ class ManageGroups extends Component {
 			}
 		}).then(function (data) {
 			console.log("pic we got back", data.data[0].secure_url)
-			API.updateByUserId("5cabdd3d6c6b343d08ef3610", data.data[0].secure_url)
+			API.updateByUserId("5cab6b77ed48d201f9869789", data.data[0].secure_url)
 				.then(function (data) {
 					console.log("data we got back", data)
 				})
@@ -123,7 +123,7 @@ class ManageGroups extends Component {
 					<img src={this.state.image} alt="boohoo" style={{ width: "100px", height: "100px" }} className="img-responsive" />
 					<input type="file" id="upload" accept="image/*" onChange={this.fileSelectedHandler} />
 
-					<button onClick={this.uploadHandler}>Upload!</button>
+					{/* <button onClick={this.uploadHandler}>Upload!</button> */}
 
 				</div>
 				<div className="col-md-1"></div>
