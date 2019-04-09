@@ -4,7 +4,10 @@ var Schema = mongoose.Schema;
 var groupsSchema = new Schema({
   
     groupName:{type: String, 
-              required: true},
+              required: true,
+              unique: true},
+    
+    description: {type: String},
 
     description: {type: String},
 

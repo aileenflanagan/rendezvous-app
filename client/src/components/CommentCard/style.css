@@ -1,0 +1,9 @@
+.comment-cards{
+	background-color: rgb(98, 150, 233);
+	margin: 1rem 1rem;
+	padding: 1rem;
+}
+
+#date-created{
+	font-size: 10pt;
+}

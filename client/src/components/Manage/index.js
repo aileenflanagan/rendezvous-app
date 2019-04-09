@@ -6,6 +6,7 @@ import AccountInfo from "../AccountInfo";
 import GroupCard from "../GroupCard";
 import axios from "axios";
 import API from "../../utils/API";
+import { api } from "cloudinary/lib/cloudinary";
 
 let editing=false;
 let changingBtnTxt="Edit";
@@ -24,7 +25,7 @@ class ManageGroups extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			image:"",
+			image: "http://res.cloudinary.com/dqadqluxx/image/upload/v1554761308/xpqkcuij73ojzaadealv.jpg",
 			name:"",
 			email:"",
 			zip:"",
@@ -40,12 +41,12 @@ class ManageGroups extends Component {
 	}
 
 	loadInfo=(id)=>{
-		API.findByUserId("5cab86375fb512895b1f91f8")
+		API.findByUserId("5cabdd3d6c6b343d08ef3610")
 		.then(res => {
 			console.log("res.data " ,res.data);
 			this.setState({
 				name:res.data.userName,
-				image: res.data.image,
+				image: res.data.image.length > 10 ? res.data.image : "http://res.cloudinary.com/dqadqluxx/image/upload/v1554761308/xpqkcuij73ojzaadealv.jpg",
 				email: res.data.email,
 				zip:res.data.zip,
 				password: res.data.password,
@@ -77,8 +78,13 @@ class ManageGroups extends Component {
 			
 		}
 	}).then(function (data) {
-		console.log("pic we got back", data)
+		console.log("pic we got back", data.data[0].secure_url)
+		API.updateByUserId("5cabdd3d6c6b343d08ef3610", data.data[0].secure_url)
+		.then(function(data) {
+			console.log("data we got back", data)
+		})
 	})
+
 	}
 	render () {
 
@@ -90,10 +96,13 @@ class ManageGroups extends Component {
 		<div className="row">
 			<div className="col-md-1"></div>
 			{/* Profile Pic */}
-			<div className="col-md-3" id="profile-pic-div">[current profile pic] <input  
-            type="file" 
-            id="upload" 
-            onChange = {this.fileSelectedHandler} /> </div>
+			<div className="col-md-3" id="profile-pic-div">
+			<img src={this.state.image} alt="boohoo" style={{ width: "100px", height: "100px"}} className="img-responsive"/> 
+			<input type="file" id="upload" accept="image/*" onChange = {this.fileSelectedHandler} />
+		
+			<button onClick={this.uploadHandler}>Upload!</button>
+ 
+				</div>
 			<div className="col-md-1"></div>
 
 			{/* User Info */}

@@ -10,7 +10,8 @@
     "mongoose": "^5.4.20",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "react-router-dom": "^5.0.0"
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "^2.1.8"
   },
   "scripts": {
     "start": "nodemon server.js",

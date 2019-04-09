@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const groupController = require("../../controllers/groupController");
-
+const passport = require('passport');
 
 // Matches with "/api/groups"
 router.route("/")
@@ -16,7 +16,7 @@ router.route("/:id")
 //.................................
 
 
-  // Matches with "/api/:keyword"
+  // Matches with "/api/groups/search/:keyword"
 router.route("/search/:keyword")
   .get(groupController.findByKeywords);
 

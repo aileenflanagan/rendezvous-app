@@ -1,11 +1,14 @@
 #carousel-div{
 	margin-top: 2rem;
-	/* padding: 0; */
+	margin-bottom: 2rem;
+	padding: 0;
+	
 }
 
-/* .carousel-item{
-	height: auto;
-} */
+.carousel-item{
+	height: 500px;
+	
+}
 
 #color {
 	background: #DEF2F1;
@@ -21,5 +24,9 @@
 	background:rgb(2, 2, 2);
 	color: white;
 	margin: auto;
+}
+
+#car {
+    height: 30rem;    
 }
 

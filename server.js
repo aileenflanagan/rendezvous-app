@@ -32,8 +32,8 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/rendezvousdb", 
 app.use(
   session({
     secret: 'secret',
-    resave: true,
-    saveUninitialized: true
+    resave: false,
+    saveUninitialized: false
   })
 );
 
