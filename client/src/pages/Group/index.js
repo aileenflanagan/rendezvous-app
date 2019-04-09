@@ -8,14 +8,10 @@ import NavbarHome from "../../components/NavbarHome";
 
 class Group extends Component {
 	state = {
+		searchedGroup: "",
 		groupName: "",
-		meetingName: "",
-		meetingTime: "",
-		meetingDate: "",
-		locationAddress: "",
-		locationCity: "",
-		locationState: "",
-		locationZip: "",
+		description: "",
+		location: "",
 		comments: [],
 		members: [],
 	}
@@ -23,6 +19,7 @@ class Group extends Component {
 	componentDidMount() {
 
 		console.log("this.props.match.params.id: ", this.props.match.params.id);
+		this.setState({ searchedGroup: this.props.match.params.id });
 
 		// API call to get the group and set the state to the results
 		API.findById(this.props.match.params.id)
@@ -30,13 +27,8 @@ class Group extends Component {
 				console.log("response123: ", response.data);
 
 				this.setState({ groupName: response.data[0].groupName })
-				this.setState({ meetingName: response.data[0].meeting.name })
-				this.setState({ meetingTime: response.data[0].meeting.time })
-				this.setState({ meetingDate: response.data[0].meeting.date })
-				this.setState({ locationAddress: response.data[0].meeting.location.address })
-				this.setState({ locationCity: response.data[0].meeting.location.city })
-				this.setState({ locationState: response.data[0].meeting.location.state })
-				this.setState({ locationZip: response.data[0].meeting.location.zip })
+				this.setState({ description: response.data[0].description })
+				this.setState({ location: response.data[0].location })
 			})
 
 		// API call to get the comments from the particular group
@@ -58,6 +50,26 @@ class Group extends Component {
 
 	}
 
+
+	joinGroupClickHandler = () => {
+		console.log("this.state.searchedGroup: ", this.state.searchedGroup);
+
+		// step 1: find the user's userId
+		// step 2: find the group's _id (this.state.searchedGroup)
+		// step 3: api call to append the groupId to the user's groupId array
+		// maybe this would work 
+		/*
+			var query = { name: 'borne' };
+			Model.findOneAndUpdate(query, { name: 'jason bourne' }, options, callback)
+		*/
+		// API.findById()
+	}
+
+
+
+
+
+
 	render() {
 		return (<>
 			<NavbarHome />
@@ -66,7 +78,10 @@ class Group extends Component {
 			<div className="row" id="main-row">
 				<div className="col-md-1"></div>
 				<div className="col-md-4 info-div">
-					<h1>{this.state.groupName}</h1>
+					<div className="pretty-div">
+						<h1>{this.state.groupName}</h1>
+						<button onClick={this.joinGroupClickHandler}>Join</button>
+					</div>
 				</div>
 				<div className="col-md-2"></div>
 				<div className="col-md-4 info-div">
@@ -78,11 +93,14 @@ class Group extends Component {
 			<div className="row">
 				<div className="col-md-3"></div>
 				<div className="col-md-6 info-div">
-					<p>Description: {this.state.meetingName}</p>
-					<p>When: {this.state.meetingDate} at {this.state.meetingTime}</p>
+					<div className="pretty-div">
+						<p>Description: {this.state.description}</p>
+						<p>Where: {this.state.location}</p>
+					</div>
 				</div>
 				<div className="col-md-3"></div>
 			</div>
+
 
 			{/* Discussion Board */}
 			<div className="row">
