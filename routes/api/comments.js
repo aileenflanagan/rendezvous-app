@@ -11,7 +11,7 @@ router.route('/')
 //.....................................
 
 router.route('/:id')
-    .get(commentsController.findAll)
+    .get(commentsController.findMany)
     .post(commentsController.create)
     .delete(commentsController.remove);
 
