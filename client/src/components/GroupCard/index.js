@@ -2,7 +2,8 @@ import React from "react";
 import {  Link } from "react-router-dom";
 import "./style.css";
 
-function GroupCard(props) {;
+function GroupCard(props) {
+	console.log("props: ",props);
 	return (
     
 		<div className="group-card-container">
@@ -13,10 +14,10 @@ function GroupCard(props) {;
 					<h4 className="group-names">{group.groupName}</h4>
 
 					{/* Passes the groupId to the group page and renders it */}
-					<Link
+					<Link className="group-card-links"
 						id={group._id}
 						to={"/group/" + group._id}
-					>View this group
+					>Click to view this group
 					</Link>
 					
 				</div>

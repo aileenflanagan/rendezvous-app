@@ -29,9 +29,9 @@ class Search extends Component {
 	render() {
 		return (<>
 
-			<div className="row group-search-rows">
+			<div className="row group-search-rows" id="main-search-div">
 				<div className="col-md-1"></div>
-				<div className="col-md-6">
+				<div className="col-md-6" id="search-input-div">
 					<h1>Search Groups</h1>
 
 					<p className="pea-tags">Search by Keyword</p>
@@ -44,18 +44,19 @@ class Search extends Component {
 				</div>
 			</div>
 
-			<div className="row group-search-rows">
-				<div className="col-md-1"></div>
-				<div className="col-md-8">
+			<div id="pseudo">
+				<div className="row group-search-rows containing-group-cards">
+					<div className="col-md-1"></div>
+					<div className="col-md-8">
 
-					<GroupCard
-						groups={this.state.groups}
-					/>
+						<GroupCard
+							groups={this.state.groups}
+						/>
+
+					</div>
 
 				</div>
-
 			</div>
-
 		</>);
 	}
 }

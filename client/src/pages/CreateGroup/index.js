@@ -35,7 +35,7 @@ class CreateGroup extends Component {
         }
 
         API.createNewGroup(newGroup).then(response => {
-            
+            window.location.href = "/"
         })
     }
 

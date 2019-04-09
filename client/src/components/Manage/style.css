@@ -1,5 +1,13 @@
-#profile-pic-div, #settings-div, #joined-groups-div, #created-groups-div, #edit-btn-div, #user-info-div{
-	background-color: rgb(132, 201, 201);
+#profile-pic-div, #settings-div, #joined-groups-div, #created-groups-div, #user-info-div{
+	background-color: rgb(87, 207, 197);
+	box-shadow: inset 0px 0px 8px 2px black;
+	
+}
+
+#edit-btn-div{
+	background-color: rgb(87, 207, 197);
+	box-shadow: inset 0px 0px 8px 2px black;
+	
 }
 
 #personal-info-tag{
@@ -13,4 +21,13 @@
 
 #edit-row{
 	margin-top: 0;
+}
+
+#main-manage-div{
+	background-color: rgb(43, 68, 138);
+	padding-bottom: 2rem;
+}
+
+.top {
+	margin-top: 5rem;
 }

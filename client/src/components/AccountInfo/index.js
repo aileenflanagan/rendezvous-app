@@ -8,8 +8,6 @@ function AccountInfo(props) {
 			Email: {props.email}
 			<br />
 			Zip Code: {props.zip}
-			<br />
-			Password: {props.password}
 		</p>
 	);
 }

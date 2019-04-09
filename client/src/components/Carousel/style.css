@@ -2,22 +2,19 @@
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 	padding: 0;
-	
 }
 
 .carousel-item{
 	height: 500px;
-	
 }
 
 #color {
-	background: #DEF2F1;
+	background: rgb(43, 68, 138);
 }
 
 .darker {
 	background: rgb(80, 78, 78);
 	color: white;
-	
 }
 
 .darker2 {

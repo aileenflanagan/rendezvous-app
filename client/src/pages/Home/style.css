@@ -1,0 +1,13 @@
+#home-div{
+	/* background-color: rgb(16, 101, 134); */
+	background-color: rgb(42, 135, 172);
+	padding-bottom: 58px;
+	overflow: hidden;
+}
+
+#color{
+	box-shadow: inset 0px 0px 8px 2px black;
+}
+#title-div{
+	box-shadow: 0px 0px 8px 2px black !important;
+}

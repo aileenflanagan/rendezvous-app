@@ -14,4 +14,16 @@
 }
 .group-cards{
 	margin: 1rem;
+	margin-bottom: 3rem;
+	padding: 1rem;
+	background: rgb(43, 68, 138);
+	box-shadow: 0px 0px 8px 2px black;
+}
+
+.group-card-links{
+	color: white;
+}
+
+.group-card-links:hover{
+	color: white;
 }

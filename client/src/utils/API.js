@@ -12,7 +12,18 @@ export default {
 		console.log(" UserId: ", id);
 		return axios.get("/api/users/"+ id);
 	},
-	
+
+	joinGroup: function(groupId, userId){
+		console.log("in utils/ and ");
+		return axios.put("/api/groups/join/" + groupId +"/"+ userId);
+		
+	},
+	joinGroupUser: function(groupId, userId){
+		console.log("going to join group user");
+		return axios.put("/api/users/join/" + userId +"/"+ groupId);
+		
+	},
+
 	findByKeywords: function (keyword) {
 		// console.log("On: API.js");
 		// console.log("keyword:", keyword);
