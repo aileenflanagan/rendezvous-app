@@ -23,7 +23,9 @@ class Logins extends React.Component {
 
 		API.userLogin(loginObj).then(response => {
 			console.log("Correct Password", "userID", response.data);
-			// window.location.href = "/"
+			sessionStorage.setItem("userDBId", response.data);
+			sessionStorage.setItem("logged", true);
+			window.location.href = "/"
 		}).catch(err => {
 			console.log("LOGIN ERR0R", err);
 			alert('Password or Email Incorrect')
