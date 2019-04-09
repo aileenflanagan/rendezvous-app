@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import NavbarGroup from '../../components/NavbarGroup';
+// import NavbarGroup from '../../components/NavbarGroup';
 import API from '../../utils/API';
+import NavbarHome from '../../components/NavbarHome';
 
 class CreateGroup extends Component {
     state = {
@@ -41,7 +42,7 @@ class CreateGroup extends Component {
     render() {
         return (
             <>
-                <NavbarGroup />
+                <NavbarHome />
                 <div className="container">
                     <h3>Create A New Group</h3>
                     <form>

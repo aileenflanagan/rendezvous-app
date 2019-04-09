@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import NavbarSignup from "../../components/NavbarSignup/index";
+// import NavbarSignup from "../../components/NavbarSignup/index";
 import CreateAccount from "../../components/CreateAccount";
+import NavbarHome from "../../components/NavbarHome";
 
 class Navbar extends Component {
 	constructor(props){
@@ -24,7 +25,7 @@ class Navbar extends Component {
 
 	render() {
 		return (<>
-			<NavbarSignup />
+			<NavbarHome />
 			<CreateAccount signup={this.handler} />
 		</>);
 	}

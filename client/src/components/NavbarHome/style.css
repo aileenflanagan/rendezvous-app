@@ -1,12 +1,15 @@
 #navbar-div{
 	display: inline;
 }
-
+/* 
 .home-buttons{
 	margin-left: 1rem;
-}
-#create-acct-btn{
+} */
+/* #create-acct-btn{
 	margin-left: 1rem;
+} */
+#login-btn {
+	margin: 1rem;
 }
 #logo{	
 	font-size: 25px;	

@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import "./style.css";
 import GroupInfo from "../GroupInfo/index";
-import NavbarBasic from "../NavbarBasic";
+// import NavbarBasic from "../NavbarBasic";
 import AccountInfo from "../AccountInfo";
 import GroupCard from "../GroupCard";
 import axios from "axios";
 import API from "../../utils/API";
 import { api } from "cloudinary/lib/cloudinary";
+import NavbarHome from "../NavbarHome";
 
 let editing=false;
 let changingBtnTxt="Edit";
@@ -90,7 +91,7 @@ class ManageGroups extends Component {
 
 	
 	return (<>
-		<NavbarBasic />
+		<NavbarHome />
 		
 
 		<div className="row">
