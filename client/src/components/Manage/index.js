@@ -88,16 +88,20 @@ class ManageGroups extends Component {
 			formData.append(i, file)
 		})
 
-		axios.post("http://localhost:3001/api/users/userSave", formData, {
+		API.picAPICall(formData, {
 			headers: {
 				'Content-Type': 'multipart/form-data'
 
 			}
 		}).then(function (data) {
-			console.log("pic we got back", data.data[0].secure_url)
-			API.updateByUserId("5cab6b77ed48d201f9869789", data.data[0].secure_url)
+			console.log("pic we got back", data.data.secure_url)
+			let picUrl = data.data.secure_url;
+			API.updateByUserId(user, {image: picUrl})
 				.then(function (data) {
-					console.log("data we got back", data)
+					console.log("user data we got back", data)
+					// this.setState({
+					// 	// image: data
+					// })
 				})
 		})
 
