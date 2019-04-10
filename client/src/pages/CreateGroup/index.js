@@ -32,10 +32,10 @@ class CreateGroup extends Component {
             location: this.state.groupLocation,
             meeting: this.state.groupMeeting,
             private: pSetting,
-            adminId: sessionStorage.userDBId
+            adminID: sessionStorage.userDBId
         }
 
-        API.createNewGroup(newGroup).then(response => {
+        API.createNewGroup(newGroup).then(() => {
             window.location.href = "/";
         })
     }

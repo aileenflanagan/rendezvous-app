@@ -15,7 +15,9 @@ var groupsSchema = new Schema({
                 
     private: {type: Boolean},
 
-    adminID: {type: String},
+    adminID: {type: String, 
+              required: true,
+              unique: true},
     
     userCreated: {type: Date, default: Date.now}, 
 

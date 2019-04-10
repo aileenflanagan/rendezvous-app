@@ -16,7 +16,7 @@ const passport = require('passport');
 router.route("/login")
   .post((req, res, next) => { next() }, passport.authenticate('local'),
     (request, response) => {
-      console.log(request.user);
+      // console.log(request.user);
       response.json(request.user._id);
     });
 
