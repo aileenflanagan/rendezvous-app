@@ -58,6 +58,14 @@ export default {
 	createComment: function(newCommentObj){
 		console.log("commentobj", newCommentObj);
 		return axios.post("/api/comments/", newCommentObj);
+	},
+
+	picAPICall: function(data, header){
+		return axios.post("/api/users/userSave", data, header);
+	},
+
+	updateByUserId: function(id, data){
+		return axios.put("/api/users/"+id, data);
 	}
 
 };

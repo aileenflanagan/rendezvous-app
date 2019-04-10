@@ -38,7 +38,10 @@ router.route("/userSave").post(function (req, res) {
 
   Promise
     .all(promises)
-    .then(results => console.log('these are our results!!!', results))
+    .then(results => {
+      console.log('these are our results!!!', results);
+      res.json(results[0]);  
+    })
   // console.log("heres our pics", values)
 })
 
