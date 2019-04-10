@@ -1,11 +1,14 @@
 #input-row{
 	/* margin-top: 10rem;	 */
-	background: url(../../images/quote.jpg);
+	/* background: url(../../images/quote.jpg); */
+	/* background-color:  */
 	height: 20em;
 }
 
-#container{
+#main-logins-container{
 	width: 100%;
+	background-color: rgb(16, 101, 134);
+	padding-bottom: 420px;
 }
 
 #input-row{
@@ -30,17 +33,28 @@
 	margin-bottom: 1rem;
 }
 
-#color2 {
-	/* background: rgb(226, 225, 225) */
+#color2, #color3{
+	box-shadow: inset 0px 0px 8px 2px black;
+	background-color: rgb(43, 68, 138);
 }
+
 
 #description-div {
 	font-size: 1em;
 	font-family: 'Times New Roman', Times, serif
 }
 
-#title-div {
+#title-div2 {
 	font-size: 2em;
 	font-family: cursive;
-	border-radius: 5px
+	border-radius: 5px;
+	background-color: rgb(43, 68, 138);
+}
+
+#input-form-div{
+	box-shadow: 0px 0px 8px 2px black;
+	background-color: rgb(87, 207, 197);
+	text-align: center;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 }

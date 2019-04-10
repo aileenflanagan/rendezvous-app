@@ -15,14 +15,13 @@ let changingBtnTxt = "Edit";
 
 let groupArr;
 let user = sessionStorage.userDBId;
-
+console.log("user blargh: ", user);
 
 function clickHandler() {
 	console.log("Event for editing goes here", editing);
 	editing = !editing;
 	console.log(editing);
 }
-
 
 class ManageGroups extends Component {
 	constructor(props) {
@@ -47,7 +46,7 @@ class ManageGroups extends Component {
 	loadInfo = (id) => {
 		API.findByUserId(id)
 			.then(res => {
-				console.log("res.data ", res.data);
+				console.log("res.data blargh ", res.data);
 				this.setState({
 					name: res.data.userName,
 					image: res.data.image.length > 10 ? res.data.image : "http://res.cloudinary.com/dqadqluxx/image/upload/v1554761308/xpqkcuij73ojzaadealv.jpg",
@@ -65,7 +64,7 @@ class ManageGroups extends Component {
 					console.log(i);
 					API.findById(i)
 						.then(res => {
-							// console.log("test1234: ", res.data[0].groupName);
+							// console.log("test1234: ", res.data[0]);
 							this.setState({
 								foundGroupInfo: [...this.state.foundGroupInfo,
 								{
@@ -105,16 +104,14 @@ class ManageGroups extends Component {
 	}
 	render() {
 
-
 		return (<div id="main-manage-div">
 			<NavbarHome />
 
-
-			<div className="row">
+			<div className="row" id="main-manage-row">
 				<div className="col-md-1"></div>
 				{/* Profile Pic */}
 				<div className="col-md-3" id="profile-pic-div">
-					<img src={this.state.image} alt="boohoo" style={{ width: "100px", height: "100px" }} className="img-responsive" />
+					<img src={this.state.image} alt="boohoo" style={{ width: "100px", height: "100px" }} className="img-responsive" id="profile-pic-img" />
 					<input type="file" id="upload" accept="image/*" onChange={this.fileSelectedHandler} />
 
 					{/* <button onClick={this.uploadHandler}>Upload!</button> */}
@@ -124,8 +121,9 @@ class ManageGroups extends Component {
 
 				{/* User Info */}
 				<div className="col-md-6" id="user-info-div">
-					<div className="row" id="edit-row">
-						<div className="col-md-10" id="settings-div">
+						{/* Use the className="col-md-10" div if we want the save/edit button. Otherwise, col-md-12 looks nicer */}
+						{/* <div className="col-md-10" id="settings-div"> */}
+						<div id="settings-div">
 							<AccountInfo
 								name={this.state.name}
 								email={this.state.email}
@@ -135,26 +133,23 @@ class ManageGroups extends Component {
 						</div>
 						{/* <div className="col-md-2" id="edit-btn-div">
 							{editing ? <button onClick={clickHandler}>Save</button> : <button onClick={clickHandler}>edit</button>}
-							
 						</div> */}
-					</div>
 				</div>
 			</div>
 
 			{/* Joined groups */}
-			<div className="row">
+			<div className="row" id="joined-groups-row">
 				<div className="col-md-1"></div>
 				<div className="col-md-10" id="joined-groups-div">
 
-					<div></div>	{/* temporary */}
-					<h3>Groups</h3>
+					<h3 id="groups-title-text">Groups</h3>
 					{/* <p>{foundGroupInfo}</p>
 					{foundGroupInfo? groups=foundGroupInfo:""} */}
 					<GroupCard
 						groups={this.state.foundGroupInfo}
 					/>
 				</div>
-				<div className="col-md-1"></div>
+				{/* <div className="col-md-1"></div> */}
 			</div>
 
 			{/* Created Groups */}

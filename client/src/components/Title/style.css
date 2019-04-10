@@ -3,19 +3,13 @@
 	text-align: center;
 	margin-top: 2rem;
 	margin-bottom: 2rem;
-	
 }
-
-/* this will affect all rows */
-/* .row{
-	width: 100%;
-} */
 
 #color {
 	background: #DEF2F1;
-	margin-bottom: 22px;
+	margin-bottom: 32px;
 }
 
 .test{
-	margin-top: 10px;
+	margin-top: 0;
 }

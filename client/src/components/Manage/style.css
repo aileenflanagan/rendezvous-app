@@ -1,13 +1,16 @@
-#profile-pic-div, #settings-div, #joined-groups-div, #created-groups-div, #user-info-div{
+#profile-pic-div, #joined-groups-div, #created-groups-div, #user-info-div{
 	background-color: rgb(87, 207, 197);
-	box-shadow: inset 0px 0px 8px 2px black;
-	
+	border-radius: 5px;
+	box-shadow: 0px 0px 8px 1px black;
 }
 
-#edit-btn-div{
+#edit-btn-div, #settings-div{
 	background-color: rgb(87, 207, 197);
-	box-shadow: inset 0px 0px 8px 2px black;
-	
+}
+
+#profile-pic-img{
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
 }
 
 #personal-info-tag{
@@ -25,9 +28,21 @@
 
 #main-manage-div{
 	background-color: rgb(43, 68, 138);
-	padding-bottom: 2rem;
+	padding-bottom: 67px;
 }
 
 .top {
 	margin-top: 5rem;
+}
+
+#groups-title-text{
+	margin-top: 0.5rem;
+}
+
+#main-manage-row{
+	width: 100%;
+}
+
+#joined-groups-row{
+	width: 100%;
 }
