@@ -7,9 +7,6 @@ function AccountInfo(props) {
 			<br />
 			Email: {props.email}
 			<br />
-<<<<<<< HEAD
-			Zip Code: {props.zip}
-=======
 			Zip Code: {props.zipCode}
 			<br />
 			Password: {props.password}
