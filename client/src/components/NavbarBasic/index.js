@@ -14,7 +14,7 @@ function NavbarBasic() {
 
 				</ul>
 				<div id="button-div">
-					<button className="btn btn-light" id="signout-btn">Sign Out</button>
+					<button href="/" className="btn btn-light" id="signout-btn">Sign Out</button>
 				</div>
 			</div>
 		</nav>

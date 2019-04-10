@@ -3,7 +3,7 @@ import {  Link } from "react-router-dom";
 import "./style.css";
 
 function GroupCard(props) {
-	console.log("props: ",props);
+	console.log("props: ", props);
 	return (
     
 		<div className="group-card-container">
