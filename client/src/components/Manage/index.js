@@ -66,8 +66,14 @@ class ManageGroups extends Component {
 					API.findById(i)
 						.then(res => {
 							// console.log("test1234: ", res.data[0].groupName);
-							let newName = res.data[0].groupName;
-							this.setState({ foundGroupInfo: [...this.state.foundGroupInfo, { groupName: res.data[0].groupName }] })
+							this.setState({
+								foundGroupInfo: [...this.state.foundGroupInfo,
+								{
+									groupName: res.data[0].groupName,
+									_id: res.data[0]._id
+								}
+								]
+							})
 						})
 				})
 			})
