@@ -51,40 +51,40 @@ class CreateGroup extends Component {
                         <h3>Create A New Group</h3>
                         <form>
                             <div className="form-group">
-                                <label for="grp-name-input">Group Name</label>
+                                <label htmlFor="grp-name-input">Group Name</label>
                                 <input type="text" className="form-control" id="grp-name-input" placeholder="" name="groupName" onChange={this.handleInputChange}></input>
                             </div>
                             <div className="form-group">
-                                <label for="grp-location-input">General Location</label>
+                                <label htmlFor="grp-location-input">General Location</label>
                                 <input type="text" className="form-control" id="grp-location-input" placeholder="City, State" name="groupLocation" onChange={this.handleInputChange}></input>
                             </div>
                             <div className="form-group">
-                                <label for="grp-mtg-input">Recurring Meeting (Optional) </label>
+                                <label htmlFor="grp-mtg-input">Recurring Meeting (Optional) </label>
                                 <input type="text" className="form-control" id="grp-mtg-input" placeholder="ex: Every Friday 4-6pm" name="groupMeeting" onChange={this.handleInputChange}></input>
                             </div>
                             <div className="form-group">
-                                <label for="description-input">Group Description</label>
+                                <label htmlFor="description-input">Group Description</label>
                                 <textarea className="form-control" id="description-input" rows="3" name="groupDescription" onChange={this.handleInputChange}></textarea>
                             </div>
                             <div id="radios">
-                                <label for="radios">Privacy Settings</label>
+                                <label htmlFor="radios">Privacy Settings</label>
                                 <div className="form-check">
                                     <input className="form-check-input" type="radio" name="privacySetting" id="private-radio" value="private" onChange={this.handleInputChange}></input>
-                                    <label className="form-check-label" for="private-radio">
+                                    <label className="form-check-label" htmlFor="private-radio">
                                         Public- anyone can join this group
                             </label>
                                 </div>
                                 <div className="form-check">
                                     <input className="form-check-input" type="radio" name="privacySetting" id="public-radio" value="public" onChange={this.handleInputChange}></input>
-                                    <label className="form-check-label" for="public-radio">
+                                    <label className="form-check-label" htmlFor="public-radio">
                                         Private- members must request to join
                         </label>
                                 </div>
                             </div>
                             {/*Insert Group Photo! how to upload??? Probably needs to be changed*/}
                             <hr></hr>
-                            <label for="upload-section">Upload a Group Photo</label>
-                            <div className="form-row align-items-center" id="upload-section">
+                            {/* <label for="upload-section">Upload a Group Photo</label> */}
+                            {/* <div className="form-row align-items-center" id="upload-section">
 
                                 <div className="col-auto">
                                     <label className="sr-only" for="inlineFormInput">Name</label>
@@ -94,7 +94,7 @@ class CreateGroup extends Component {
                                     <button type="submit" className="btn btn-primary mb-2">Upload</button>
                                 </div>
                             </div>
-                            <hr></hr>
+                            <hr></hr> */}
                             <button className="btn btn-success" id="create-group-btn" onClick={this.newGroup}>Create</button>
                         </form>
 
