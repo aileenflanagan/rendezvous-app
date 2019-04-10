@@ -38,9 +38,9 @@ class Search extends Component {
 					<input type="text" onChange={this.handleInputChange}></input>
 					<button onClick={this.searchGroupsKeyword}>Search</button>
 
-					<p className="pea-tags">Search by Location</p>
+					{/* <p className="pea-tags">Search by Location</p>
 					<input type="text"></input>
-					<button>Search</button>
+					<button>Search</button> */}
 				</div>
 			</div>
 

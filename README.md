@@ -20,7 +20,7 @@ After clicking signup, you will then have to login! <br/>
 <img width="1435" alt="Screen Shot 2019-04-09 at 9 45 55 AM" src="https://user-images.githubusercontent.com/46298501/55810317-fb63b080-5aac-11e9-8e89-0779869a106a.png">
 
 <br/>
-Next, click the go to group search botton. Here, you can start searching for groups by typing in the search box what kind of groups you would like to find i.e. writing, excercising, dogs, etc. If nothing appeals, you can also create your own group by clicking the create my group button.
+Next, click the go to group search button. Here, you can start searching for groups by typing in the search box what kind of groups you would like to find i.e. writing, excercising, dogs, etc. If nothing appeals, you can also create your own group by clicking the create my group button.
 <BR/>
 <img width="1435" alt="Screen Shot 2019-04-09 at 9 46 51 AM" src="https://user-images.githubusercontent.com/46298501/55810444-2cdc7c00-5aad-11e9-9044-a699989ca2ed.png">
 <BR/>
@@ -41,3 +41,15 @@ If you need to change anything about your group, click the settings button and i
 <BR/>
 
 Welcome to rendenvouz, get out and follow your passion.
+
+
+##Bugs
+  * Despite setting the state for the image on the /Manage page and setting a state for the comments on /Group, the page will not render again until it is refreshed. Adding comments and updating the photo do work, but the page needs to be refreshed. 
+
+##Future Updates
+  * Allow user to upload photo during sign up.
+  * Allow groups to add an image for that specific group. 
+  * Edit user info and group info.
+  * Search groups by location, and possibly bring in an API to search within a certain distance. 
+  * Set meetings/events outside of the scheduled meeting time
+  * Have users compete against each other to do daily challanges
