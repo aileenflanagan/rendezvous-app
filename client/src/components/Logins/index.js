@@ -34,24 +34,24 @@ class Logins extends React.Component {
 
 	render() {
 		return (
-			<div id="container">
-				<div id="color" className="row">
+			<div id="main-logins-container">
+				<div id="color2" className="row">
 					<div className="col-md-2"></div>
 					<div className="col-md-8" id="title-div">
 						Log in
 					</div>
 				</div>
 
-				<div className="row">
+				<div className="row" id="color3">
 					<div className="col-md-5"></div>
-					<div className="col-md-2">
+					<div className="col-md-2" id="input-form-div">
 						<form>
-						<div className="headers">Email:</div>
+							<div className="headers">Email:</div>
 							<input type="email" id="email" name="email" onChange={this.handleInputChange}></input>
 
-						<div className="headers">Password:</div>
+							<div className="headers">Password:</div>
 							<input type="password" id="password" name="password" onChange={this.handleInputChange}></input>
-						</form>	
+						</form>
 						<div>
 							<button className="btn btn-dark btn-sm" id="signup-btn" onClick={this.loginSubmit}>Log in</button>
 						</div>

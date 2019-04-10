@@ -44,18 +44,16 @@ class Search extends Component {
 				</div>
 			</div>
 
-			<div id="pseudo">
-				<div className="row group-search-rows containing-group-cards">
-					<div className="col-md-1"></div>
-					<div className="col-md-8">
+			<div className="row group-search-rows containing-group-cards" id="pseudo">
+				<div className="col-md-1"></div>
+				<div className="col-md-8">
 
-						<GroupCard
-							groups={this.state.groups}
-						/>
-
-					</div>
+					<GroupCard
+						groups={this.state.groups}
+					/>
 
 				</div>
+
 			</div>
 		</>);
 	}

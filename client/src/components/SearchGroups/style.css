@@ -19,6 +19,10 @@
 	border-radius: 5px;
 }
 
+#pseudo{
+	min-height: 478px;
+}
+
 .group-search-rows{
 	background-color: rgb(42, 135, 172);
 	margin: 0;
