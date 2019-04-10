@@ -4,6 +4,9 @@ import CommentCard from "../../components/CommentCard";
 import MemberCard from "../../components/MemberCard";
 import API from "../../utils/API";
 import NavbarHome from "../../components/NavbarHome";
+import {TextArea, FormBtn } from "../../components/Form";
+
+let user=sessionStorage.userDBId
 
 class Group extends Component {
 	state = {
@@ -13,6 +16,7 @@ class Group extends Component {
 		location: "",
 		comments: [],
 		members: [],
+		currentComment:""
 	}
 
 	componentDidMount() {
@@ -47,6 +51,28 @@ class Group extends Component {
 		// API.findByUserId(this.state.comments)
 	}
 
+	handleInputChange = event => {
+		const { name, value } = event.target;
+		this.setState({
+		  [name]: value
+		});
+	  };
+
+	  handleFormSubmit = event => {
+		event.preventDefault();
+		if (this.state.currentComment) {
+		  API.createComment({
+			description: this.state.currentComment,
+			userId: user,
+			groupId: this.state.searchedGroup
+		  })
+			.then(res => {
+				console.log("submitted comment");
+				this.setState({currentComment: ""});
+			})
+			.catch(err => console.log(err));
+		}
+	  };
 
 	joinGroupClickHandler = () => {
 		console.log("current group's _id: ", this.state.searchedGroup);
@@ -94,7 +120,7 @@ class Group extends Component {
 				<div className="col-md-4 info-div">
 					<div className="pretty-div">
 						<h1>{this.state.groupName}</h1>
-						<button onClick={this.joinGroupClickHandler}>Join</button>
+						<button className="btn btn-primary" onClick={this.joinGroupClickHandler}>Join</button>
 					</div>
 				</div>
 				<div className="col-md-2"></div>
@@ -118,6 +144,11 @@ class Group extends Component {
 
 			{/* Discussion Board */}
 			<div className="row">
+			<div className="col-auto"><h3>Discussion Board</h3></div>
+			
+			</div>
+			<div className="row">
+				
 				<div className="col-md-1"></div>
 				<div className="col-md-10 info-div" id="comment-container">
 					<CommentCard
@@ -126,6 +157,24 @@ class Group extends Component {
 				</div>
 				<div className="col-md-1"></div>
 			</div>
+				<div className="row">
+					{/* <div className="col-auto"> */}
+						<form>
+							<TextArea
+								value={this.state.currentComment}
+								onChange={this.handleInputChange}
+								name="currentComment"
+								placeholder="Add to the discussion..."
+							  />
+							  <FormBtn
+								disabled={!(this.state.currentComment)}
+								onClick={this.handleFormSubmit}
+							  >
+								Submit
+							  </FormBtn>
+						</form>
+					{/* </div> */}
+				</div>
 
 			{/* Group Members */}
 			<div className="row">

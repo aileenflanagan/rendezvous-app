@@ -53,6 +53,11 @@ export default {
 	createNewGroup: function(newGroupObj) {
 		console.log();
 		return axios.post("/api/groups", newGroupObj)
+	}, 
+
+	createComment: function(newCommentObj){
+		console.log("commentobj", newCommentObj);
+		return axios.post("/api/comments/", newCommentObj);
 	}
 
 };
