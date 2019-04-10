@@ -22,6 +22,7 @@ class NavbarHome extends React.Component {
 			logOutBut.style.display = "none";
 			groupBut.style.display = "none";
 			createGroupBut.style.display = "none";
+			console.log("not logged");
 		}
 	}	
 	
@@ -48,21 +49,13 @@ class NavbarHome extends React.Component {
 						</li>
 
 					</ul>
-<<<<<<< HEAD
-					<div   id="button-div">
-						<a className="btn btn-Light home-buttons" id="group-btn" href="/manage">Manage Group</a>
-						<a className="btn btn-Light home-buttons" id="create-group-btn" href="/creategroup">Create Group</a>
-						<a className="btn btn-Light home-buttons" id="login-btn" href="/login">Log in</a>
-						<a className="btn btn-Light home-buttons" id="logout-btn" href="/" onClick={this.userLogOut}>Log Out</a>
-						<a className="btn btn-Light home-buttons" id="create-acct-btn" href="/signup">Create account</a>
-=======
 					<a className="btn btn-Light home-buttons" id="search-btn" href="/search"><b>Go to Group Search</b></a>
 					<div id="button-div">
 						<a className="btn btn-Light home-buttons" id="group-btn" href="/manage"><b>Manage Group</b></a>
+						<a className="btn btn-Light home-buttons" id="create-group-btn" href="/createGroup"><b>Create Groups</b></a>
 						<a className="btn btn-Light home-buttons" id="login-btn" href="/login"><b>Log in</b></a>
 						<a className="btn btn-Light home-buttons" id="logout-btn" href="/" onClick={this.userLogOut}><b>Log Out</b></a>
 						<a className="btn btn-Light home-buttons" id="create-acct-btn" href="/signup"><b>Create account</b></a>
->>>>>>> 5cb357d5fab57486db8c2d8a200235bfd7da3870
 					</div>
 				</div>
 			</nav>

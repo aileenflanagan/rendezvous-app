@@ -45,12 +45,13 @@ class Logins extends React.Component {
 				<div className="row">
 					<div className="col-md-5"></div>
 					<div className="col-md-2">
-
+						<form>
 						<div className="headers">Email:</div>
-						<input type="email" id="email" name="email" onChange={this.handleInputChange}></input>
+							<input type="email" id="email" name="email" onChange={this.handleInputChange}></input>
 
 						<div className="headers">Password:</div>
-						<input type="password" id="password" name="password" onChange={this.handleInputChange}></input>
+							<input type="password" id="password" name="password" onChange={this.handleInputChange}></input>
+						</form>	
 						<div>
 							<button className="btn btn-dark btn-sm" id="signup-btn" onClick={this.loginSubmit}>Log in</button>
 						</div>

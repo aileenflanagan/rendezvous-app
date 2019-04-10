@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import NavbarSignup from '../../components/NavbarSignup';
+import { Link } from "react-router-dom";
+import NavbarHome from '../../components/NavbarHome';
 import API from '../../utils/API';
 
 class CreateGroup extends Component {
@@ -12,16 +13,16 @@ class CreateGroup extends Component {
     };
 
     handleInputChange = event => {
-		const { name, value } = event.target;
-		this.setState({
-			[name]: value
-		});
-	};
+        const { name, value } = event.target;
+        this.setState({
+            [name]: value
+        });
+    };
 
     newGroup = () => {
         let pSetting = false;
 
-        if(this.state.privacySetting === "private"){
+        if (this.state.privacySetting === "private") {
             pSetting = true;
         }
 
@@ -31,18 +32,18 @@ class CreateGroup extends Component {
             location: this.state.groupLocation,
             meeting: this.state.groupMeeting,
             private: pSetting,
-            adminId: sessionStorage.getItem("userDBId")
+            adminID: sessionStorage.userDBId
         }
 
-        API.createNewGroup(newGroup).then(response => {
-            window.location.href = "/"
+        API.createNewGroup(newGroup).then(() => {
+            window.location.href = "/";
         })
     }
 
     render() {
         return (
             <>
-                <NavbarSignup />
+                <NavbarHome />
                 <div className="container">
                     <h3>Create A New Group</h3>
                     <form>
@@ -73,25 +74,25 @@ class CreateGroup extends Component {
                             <div className="form-check">
                                 <input className="form-check-input" type="radio" name="privacySetting" id="public-radio" value="public" onChange={this.handleInputChange}></input>
                                 <label className="form-check-label" for="public-radio">
-                                    Private- members must request to join 
+                                    Private- members must request to join
                         </label>
                             </div>
                         </div>
-                                            {/*Insert Group Photo! how to upload??? Probably needs to be changed*/}
-                    <hr></hr>
-                    <label for="upload-section">Upload a Group Photo</label>
-                    <div className="form-row align-items-center" id="upload-section">
-                        
-                        <div className="col-auto">
-                            <label className="sr-only" for="inlineFormInput">Name</label>
-                            <input type="text" className="form-control mb-2" id="inlineFormInput" placeholder=""></input>
+                        {/*Insert Group Photo! how to upload??? Probably needs to be changed*/}
+                        <hr></hr>
+                        <label for="upload-section">Upload a Group Photo</label>
+                        <div className="form-row align-items-center" id="upload-section">
+
+                            <div className="col-auto">
+                                <label className="sr-only" for="inlineFormInput">Name</label>
+                                <input type="text" className="form-control mb-2" id="inlineFormInput" placeholder=""></input>
+                            </div>
+                            <div className="col-auto">
+                                <button type="submit" className="btn btn-primary mb-2">Upload</button>
+                            </div>
                         </div>
-                        <div className="col-auto">
-                            <button type="submit" className="btn btn-primary mb-2">Upload</button>
-                        </div>
-                    </div>
-                    <hr></hr>
-                    <button className="btn btn-success" onClick={this.newGroup}>Create</button>
+                        <hr></hr>
+                        <button className="btn btn-success" onClick={this.newGroup}>Create</button>
                     </form>
 
 

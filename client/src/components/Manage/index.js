@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./style.css";
 import GroupInfo from "../GroupInfo/index";
-import NavbarBasic from "../NavbarBasic";
+import NavbarHome from "../NavbarHome";
 import AccountInfo from "../AccountInfo";
 import GroupCard from "../GroupCard";
 import axios from "axios";
@@ -14,8 +14,7 @@ let changingBtnTxt = "Edit";
 // import group data from db
 
 let groupArr;
-let foundGroupInfo=[];
-let user=sessionStorage.userDBId;
+let user = sessionStorage.userDBId;
 
 
 function clickHandler() {
@@ -32,11 +31,12 @@ class ManageGroups extends Component {
 			image: "http://res.cloudinary.com/dqadqluxx/image/upload/v1554761308/xpqkcuij73ojzaadealv.jpg",
 			name: "",
 			email: "",
-			zip: "",
+			zipCode: "",
 			password: "",
 			groupId: [],
 			groups: [],
-			admin: []
+			admin: [],
+			foundGroupInfo: [],
 		}
 	}
 
@@ -52,39 +52,27 @@ class ManageGroups extends Component {
 					name: res.data.userName,
 					image: res.data.image.length > 10 ? res.data.image : "http://res.cloudinary.com/dqadqluxx/image/upload/v1554761308/xpqkcuij73ojzaadealv.jpg",
 					email: res.data.email,
-					zip: res.data.zip,
+					zipCode: res.data.zipCode,
 					password: res.data.password,
 					groupId: res.data.groupId,
 					admin: res.data.admin
 				})
 				console.log(this.state);
 			})
-			.then(res=>{
-				groupArr=this.state.groupId;			
-				groupArr.map((i)=>{
+			.then(res => {
+				groupArr = this.state.groupId;
+				groupArr.map((i) => {
 					console.log(i);
 					API.findById(i)
-					.then(res=>{
-						// console.log("resdata", res.data);
-						// this.setState({groups: "something"});
-						console.log("this.state.groups",this.state.groups);
-						foundGroupInfo.push(res.data);
-						console.log("foundgroups: ",foundGroupInfo);
-						this.setState({groups: "something"})					
-					})
-					// .then(res=>{
-					// 	foundGroupInfo.map((i)=>{
-					// 		console.log("mapping foundGroupInfo", i);
-					// 	})
-					// })
+						.then(res => {
+							// console.log("test1234: ", res.data[0].groupName);
+							let newName = res.data[0].groupName;
+							this.setState({ foundGroupInfo: [...this.state.foundGroupInfo, { groupName: res.data[0].groupName }] })
+						})
 				})
-			}
-				
-			)
+			})
 			.catch(err => console.log(err));
 	}
-
-
 
 	fileSelectedHandler = (event) => {
 		console.log("this is our photo", event.target.files[0])
@@ -113,7 +101,7 @@ class ManageGroups extends Component {
 
 
 		return (<div id="main-manage-div">
-			<NavbarBasic />
+			<NavbarHome />
 
 
 			<div className="row">
@@ -135,7 +123,7 @@ class ManageGroups extends Component {
 							<AccountInfo
 								name={this.state.name}
 								email={this.state.email}
-								zip={this.state.zip}
+								zipCode={this.state.zipCode}
 								password="******"
 							/>
 						</div>
@@ -157,22 +145,8 @@ class ManageGroups extends Component {
 					{/* <p>{foundGroupInfo}</p>
 					{foundGroupInfo? groups=foundGroupInfo:""} */}
 					<GroupCard
-						groups={foundGroupInfo}
-						
-
-
+						groups={this.state.foundGroupInfo}
 					/>
-					{/* <GroupCard />
-					<GroupCard />
-					<GroupCard />
-					<GroupCard />
-					<GroupCard />
-					<GroupCard />
-					<GroupCard />
-					<GroupCard />
-					<GroupCard /> */}
-
-
 				</div>
 				<div className="col-md-1"></div>
 			</div>
@@ -182,9 +156,6 @@ class ManageGroups extends Component {
 				<div className="col-md-1"></div>
 				<div className="col-md-10" id="created-groups-div">
 					<div>[group card component goes here: group image, group name, reassign btn, delete btn]</div>	
-					
-
-
 				</div>
 				<div className="col-md-1"></div>
 			</div> */}

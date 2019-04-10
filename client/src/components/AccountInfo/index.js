@@ -7,7 +7,13 @@ function AccountInfo(props) {
 			<br />
 			Email: {props.email}
 			<br />
+<<<<<<< HEAD
 			Zip Code: {props.zip}
+=======
+			Zip Code: {props.zipCode}
+			<br />
+			Password: {props.password}
+>>>>>>> a5d4067dbd1b525026063745c8429860917c0af6
 		</p>
 	);
 }

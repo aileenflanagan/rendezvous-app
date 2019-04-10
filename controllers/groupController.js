@@ -5,6 +5,7 @@ module.exports = {
         db.Groups
             .create(req.body)
             .then(dbModel => res.json(dbModel))
+            .then(() => res.redirect("/"))
             .catch(err => res.status(422).json(err))
     },
 
@@ -24,13 +25,13 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
 
-    joinGroup: function(req, res){
+    joinGroup: function (req, res) {
         db.Groups
-            .findOneAndUpdate({_id: req.params.groupId}, {$push: {groupMembers: req.params.userId}})
-            .then(dbModel=> res.json(dbModel))
+            .findOneAndUpdate({ _id: req.params.groupId }, { $push: { groupMembers: req.params.userId } })
+            .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
-    
+
     remove: function (req, res) {
         db.Groups.findById(req.params.id)
             .then(dbGroups => dbGroups.remove())
